@@ -86,3 +86,24 @@ html {
   color: var(--main-white);
   padding-left: 1.5rem;
 }
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+.form-control {
+  border-radius: 0;
+}
+#contact-section {
+  background-color: var(--main-black);
+}
+#contact-section h2 {
+  color: var(--main-red);
+}
+#contact-section button {
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+#contact-section button:hover {
+  background-color: var(--main-white);
+  color: var(--main-red);
+}
