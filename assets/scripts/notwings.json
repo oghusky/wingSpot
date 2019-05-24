@@ -1,0 +1,77 @@
+[
+  {
+    "numOfPieces": 3,
+    "typeOfItem": "Tenders",
+    "priceOfItem": "3.95"
+  },
+  {
+    "numOfPieces": 6,
+    "typeOfItem": "Tenders",
+    "priceOfItem": "6.55"
+  },
+  {
+    "numOfPieces": 2,
+    "typeOfItem": "Talapia",
+    "priceOfItem": "4.25"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Talapia",
+    "priceOfItem": "2.75"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Whiting Sandwich",
+    "priceOfItem": "4.25"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Single Whiting",
+    "priceOfItem": "2.75"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Pork Chop",
+    "priceOfItem": "4.17"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Chicken Sandwich",
+    "priceOfItem": "4.00"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Philly",
+    "priceOfItem": "4.75"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Burger",
+    "priceOfItem": "4.20"
+  },
+  {
+    "numOfPieces": "Not Combo",
+    "typeOfItem": "Liver/Gizzards",
+    "priceOfItem": "4.15"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Hot Dog",
+    "priceOfItem": "1.15"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Chili Dog",
+    "priceOfItem": "1.40"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Slaw Dog",
+    "priceOfItem": "1.40"
+  },
+  {
+    "numOfPieces": "Single",
+    "typeOfItem": "Ultimate Dog",
+    "priceOfItem": "1.89"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "typeOfItem": "Fries",
+    "regSize": "1.85",
+    "lgSize": "3.50",
+    "famSize": "4.50"
+  },
+  {
+    "typeOfItem": "Onion Rings",
+    "regSize": "1.85",
+    "lgSize": "3.50",
+    "famSize": ""
+  },
+  {
+    "typeOfItem": "Slaw",
+    "regSize": "2.04",
+    "lgSize": "2.50",
+    "famSize": ""
+  },
+  {
+    "typeOfItem": "Potato Salad",
+    "regSize": "2.04",
+    "lgSize": "2.50",
+    "famSize": ""
+  },
+  {
+    "typeOfItem": "Okra",
+    "regSize": "2.15",
+    "lgSize": "4.15",
+    "famSize": ""
+  },
+  {
+    "typeOfItem": "Side Salad",
+    "regSize": "3.24",
+    "lgSize": "5.23",
+    "famSize": ""
+  },
+  {
+    "typeOfItem": "Salad w/Meat",
+    "regSize": "4.50",
+    "lgSize": "6.50",
+    "famSize": ""
+  }
+]
