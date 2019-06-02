@@ -19,7 +19,7 @@ $.ajax({
       wingSection.appendChild(productDiv);
       productDiv.innerHTML = `
       <div class="card-body">
-      <h5 class="card-title"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
+      <h5 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
       <hr/>
       <h5 class="card-text product-price">$${productPrice}</h5>
       </div>`;
@@ -47,7 +47,7 @@ $.ajax({
       notWingSection.appendChild(productDiv);
       productDiv.innerHTML = `
       <div class="card-body">
-      <h5 class="card-title"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
+      <h5 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
       <hr/>
       <h5 class="card-text product-price">$ ${productPrice}</h5>
       </div>`;
@@ -78,6 +78,7 @@ $.ajax({
     });
   })
   .catch(err => console.log(err));
+// points to combo file
 $.ajax({
   type: "GET",
   url: "./assets/scripts/combos.json",
@@ -97,11 +98,12 @@ $.ajax({
     comboSection.appendChild(productDiv);
     productDiv.innerHTML = `
       <div class="card-body mb-3">
-      <h6 class="card-title"><span>${productNumOfPieces}</span> <span>${productType}</span></h6>
+      <h6 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h6>
       <hr/><h6 class="card-text product-price">$${productPrice}</h6>
       </div>`;
   });
 });
+// points to drink file
 $.ajax({
   type: "GET",
   url: "./assets/scripts/drinks.json",

@@ -13,13 +13,15 @@
       crossorigin="anonymous"
     />
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="./assets/styles/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/styles/main.css" /> -->
+    <link rel="stylesheet" href="./assets/styles/backup.css">
+    
   </head>
   <body>
     <!-- Navbar Starts -->
     <nav id="whole-nav" class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">JR Wings</a>
+      <a id="site-brand" class="navbar-brand" href="#">JR Wings</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -62,18 +64,24 @@
     <!-- Navbar Ends -->
     <!-- Header starts -->
     <header class="jumbotron">
-      <div id="inner-jumbotron">
-        <h3 class="page-subtitle display-4">Welcome to</h3>
-        <h1 class="display-1 text-center" id="page-title">
-          JR Wings
-        </h1>
-        <h3 class="page-subtitle text-right display-4">& Things</h3>
+      <div id="inner-jumbotron" class="row">
+        <div id="leftSide-jumbo" class="col-md-6">
+          <h3 class="">Welcome to</h3>
+          <h1 class="" id="page-title">
+            JR Wings
+          </h1>
+          <h3 class="page-subtitle">& Things</h3>
+        </div>
+        <div class="container-fluid col-md-6" id="rightSide-jumbo">
+          <img src="./assets/images/plateOfWings.png" alt="Plate of Wings" class="img-fluid">
+        </div>
       </div>
     </header>
     <!-- Header Ends -->
     <!-- Main Content starts -->
     <h3 class="display-3 text-center">MENU</h3>
     <section id="food-categories" class="container">
+      <hr class="endingHr" />
       <h3 class="food-category-name text-left">WINGS</h3>
       <div id="wing-section"></div>
       <h6 id="flavor-names">FLAVORS:</h6>
@@ -93,46 +101,65 @@
       <p>
         <small><strong>$.30 FOR EXTRA WET</strong></small>
       </p>
-      <hr />
+      <hr class="endingHr" />
       <h3 class="food-category-name text-left">OTHER THAN WINGS</h3>
       <div id="notwing-section"></div>
+      <hr class="endingHr"/>
       <h3 class="food-category-name text-left">SIDES</h3>
       <div class="container" id="sides-section"></div>
       <p>
         <small><strong>CHICKEN/FISH FRIED OR GRILLED</strong></small>
       </p>
-      <hr />
+      <hr class="endingHr" />
       <h3 class="food-category-name text-left">
         COMBOS <span><small>INCLUES ONE SIDE &amp; DRINK</small></span>
       </h3>
       <div id="combo-section"></div>
-      <hr />
+      <hr class="endingHr" />
       <h3 class="food-category-name text-left">
         DRINKS/DESSERTS</small></span>
       </h3>
       <div id="drinks-section"></div>
-      <hr />
       <p class="disclaimer my-0 py-0">*PRICES AND PRODUCTS SUBJECT TO CHANGE WITHOUT NOTICE</p>
-      <p class="disclaimer my-0 py-0">*ONLINE PRICES AND MAY NOT BE THE SAME</p>
+      <p class="disclaimer my-0 py-0">*ONLINE PRICES AND MAY NOT MATCH IN STORE PRICES</p>
+      <hr class="endingHr" />
     </section>
 
     <!-- Main Content endss -->
     <!-- Location starts -->
+    <section class="container">
+      <h3 id="location-header">LOCATION</h3>
+      <div id="location" class="row">
+        <div id="address" class="col-md-6">
+          <p><strong>ADDRESS:</strong></p>
+          <p>JR'S WINGS AND THINGS</p>
+          <p>5731 TRAMMEL RD</p>
+          <p>LAKE CITY, GA 30260</p>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div id="map" class="container-fluid">
+            <img src="./assets/images/map.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <hr class="endingHr" />
+    </section>
     <!-- Location ends -->
     <!-- Contact Form starts -->
-    <section class="container" id="contact-section">
+    <section id="contact-section">
       <h2 id="order-title" class="text-center display-3">ORDER HERE</h2>
-      <form action="http://formspree.io/jrwingslakecity@gmail.com">
+      <form action="http://formspree.io/jrwingslakecity@gmail.com" method="POST">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Enter Name">
+        <input type="text" class="form-control" placeholder="Enter Name" name="name">
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" placeholder="example@email.com">
+        <input type="email" class="form-control" placeholder="example@email.com" name="_replyto">
 </div>
 <div class="form-group">
-  <textarea class="form-control" cols="30" rows="10"></textarea>
+  <textarea class="form-control" cols="30" rows="10" name="order"></textarea>
 </div>
-<button class="btn" type="submit">SUBMIT</button>
+<button class="btn" type="submit" value="Send">SUBMIT</button>
 </form>
     </section>
     <!-- Contact Form ends -->
