@@ -6,23 +6,19 @@ $.ajax({
 })
   .then(response => {
     productArray = response;
+    const wingSection = document.querySelector("#wing-section");
+    wingSection.classList.add("row");
     productArray.forEach(product => {
-      const wingSection = document.querySelector("#wing-section");
-      const productImageUrl = product.productImage;
       const productNumOfPieces = product.numOfPieces;
       const productType = product.typeOfItem;
       const productPrice = product.priceOfItem;
       const productDiv = document.createElement("div");
-      wingSection.classList.add("row");
-      let productClassesToAdd = ["product-div"];
-      productDiv.classList.add(...productClassesToAdd);
+      productDiv.classList.add("col-md-2");
       wingSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <div class="card-body">
-      <h5 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
-      <hr/>
-      <h5 class="card-text product-price">$${productPrice}</h5>
-      </div>`;
+      <h5><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
+      <h5>$${productPrice}</h5>
+      `;
     });
   })
   .catch(err => console.log(err));
@@ -34,23 +30,18 @@ $.ajax({
 })
   .then(response => {
     productArray = response;
+    const notWingSection = document.querySelector("#notwing-section");
+    notWingSection.classList.add("row");
     productArray.forEach(product => {
-      const notWingSection = document.querySelector("#notwing-section");
-      const productImageUrl = product.productImage;
       const productNumOfPieces = product.numOfPieces;
       const productType = product.typeOfItem;
       const productPrice = product.priceOfItem;
       const productDiv = document.createElement("div");
-      notWingSection.classList.add("row");
-      let productClassesToAdd = ["product-div"];
-      productDiv.classList.add(...productClassesToAdd);
+      productDiv.classList.add("col-md-3");
       notWingSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <div class="card-body">
-      <h5 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
-      <hr/>
-      <h5 class="card-text product-price">$ ${productPrice}</h5>
-      </div>`;
+      <h5><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
+      <h5>$ ${productPrice}</h5>`;
     });
   })
   .catch(err => console.log(err));
@@ -62,19 +53,17 @@ $.ajax({
 })
   .then(response => {
     productArray = response;
+    const sidesSection = document.querySelector("#sides-section");
     productArray.forEach(product => {
-      const sidesSection = document.querySelector("#sides-section");
       const productType = product.typeOfItem;
       const regSize = product.regSize;
       const lgSize = product.lgSize;
       const famSize = product.famSize;
       const productDiv = document.createElement("div");
-      let productClassesToAdd = ["sides-div"];
-      productDiv.classList.add(...productClassesToAdd);
       sidesSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5><strong>${productType}:</strong></h5>
-      <p><span><strong>REG:</strong></span> <span class="product-price">$${regSize}</span> <span><strong>LG:</strong></span> <span class="product-price">$${lgSize}</span> <span><strong>FAM:</strong></span> <span class="product-price">$${famSize}</span></p>`;
+      <h5>${productType}:</h5>
+      <h6><span>REG:</span> <span class="product-price">$${regSize}</span> <span>LG:</span> <span class="product-price">$${lgSize}</span> <span>FAM:</span> <span class="product-price">$${famSize}</span></h6>`;
     });
   })
   .catch(err => console.log(err));
@@ -85,22 +74,18 @@ $.ajax({
   dataType: "json"
 }).then(response => {
   productArray = response;
+  const comboSection = document.querySelector("#combo-section");
+  comboSection.classList.add("row");
   productArray.forEach(product => {
-    const comboSection = document.querySelector("#combo-section");
-    const productImageUrl = product.productImage;
     const productNumOfPieces = product.numOfPieces;
     const productType = product.typeOfItem;
     const productPrice = product.priceOfItem;
     const productDiv = document.createElement("div");
-    comboSection.classList.add("row");
-    let productClassesToAdd = ["product-div"];
-    productDiv.classList.add(...productClassesToAdd);
+    productDiv.classList.add("col-md-3");
     comboSection.appendChild(productDiv);
     productDiv.innerHTML = `
-      <div class="card-body mb-3">
-      <h6 class="card-title" style="color: #a71930"><span>${productNumOfPieces}</span> <span>${productType}</span></h6>
-      <hr/><h6 class="card-text product-price">$${productPrice}</h6>
-      </div>`;
+      <h5 class="combo-name"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
+      <h5 class="combo-price">$${productPrice}</h5>`;
   });
 });
 // points to drink file
@@ -111,21 +96,41 @@ $.ajax({
 })
   .then(response => {
     productArray = response;
+    const drinksSection = document.querySelector("#drinks-section");
     productArray.forEach(product => {
-      const drinksSection = document.querySelector("#drinks-section");
       const productType = product.typeOfItem;
       const regSize = product.regSize;
       const jumboSize = product.jumboSize;
       const halfSize = product.halfSize;
       const gallonSize = product.gallonSize;
       const productDiv = document.createElement("div");
-      let productClassesToAdd = ["drinks-div"];
-      productDiv.classList.add(...productClassesToAdd);
       drinksSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5><strong>${productType}:</strong></h5>
-      <p><span><strong>REG:</strong></span> <span class="product-price">$${regSize}</span> <span><strong>JUMBO:</strong></span> <span class="product-price">$${jumboSize}</span> <span><strong>HALF GALLON:</strong></span> <span class="product-price">$${halfSize}</span>
-      <span><strong>GALLON:</strong></span> <span class="product-price">$${gallonSize}</span></p>`;
+      <h5>${productType}:</h5>
+      <h6><span>REG:</span> <span class="product-price">$${regSize}</span> <span>JUMBO:</span> <span class="product-price">$${jumboSize}</span> <span>HALF GALLON:</span> <span class="product-price">$${halfSize}</span>
+      <span>GALLON:</span> <span class="product-price">$${gallonSize}</span></h6>`;
     });
+  })
+  .catch(err => console.log(err));
+// points to deals file
+$.ajax({
+  type: "GET",
+  url: "./assets/scripts/deals.json",
+  dataType: "json"
+})
+  .then(response => {
+    const today = new Date().getDay();
+    function showDeal() {
+      const day = today;
+      const dayOfWeek = response[day].dayOfWeek;
+      const dealType = response[day].dealType;
+      const dealPrice = response[day].dealPrice;
+      const dealOfDay = document.querySelector("#deals-div");
+      dealOfDay.innerHTML = `<div class="col-md-6">
+      <h5>${dayOfWeek} Deal Of The Day</h5>
+      <h5>${dealType}</h5> <h5>${dealPrice}</h5>
+      </div>`;
+    }
+    showDeal();
   })
   .catch(err => console.log(err));

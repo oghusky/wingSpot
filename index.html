@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JR Wings & Things</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./assets/styles/reset.css">
     <!-- Bootstrap Styles -->
     <link
       rel="stylesheet"
@@ -14,13 +16,11 @@
     />
     <!-- Custom Styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./assets/styles/main.css" /> -->
-    <link rel="stylesheet" href="./assets/styles/backup.css">
-    
+    <link rel="stylesheet" href="./assets/styles/main.css" />
   </head>
   <body>
     <!-- Navbar Starts -->
-    <nav id="whole-nav" class="navbar navbar-expand-lg navbar-dark">
+    <nav id="whole-nav" class="navbar navbar-expand-lg navbar-dark-bg navbar-dark">
       <a id="site-brand" class="navbar-brand" href="#">JR Wings</a>
       <button
         class="navbar-toggler"
@@ -78,51 +78,74 @@
       </div>
     </header>
     <!-- Header Ends -->
+    <!-- Deals and Events start -->
+    <section class="row" id="deals-and-events">
+        <div class="col-md-6" id="deals-div"></div>
+        <div class="col-md-6" id="event-div">
+          <h5 class="event-header">Every Friday:</h5>
+          <h5 class="event-header">JR's Sip</h5>
+          <h5 class="event-header">& Paint</h5>
+        </div>
+    </section>
+    <!-- Deals and Events end -->
     <!-- Main Content starts -->
     <h3 class="display-3 text-center">MENU</h3>
     <section id="food-categories" class="container">
       <hr class="endingHr" />
+      <!-- wings start -->
       <h3 class="food-category-name text-left">WINGS</h3>
       <div id="wing-section"></div>
       <h6 id="flavor-names">FLAVORS:</h6>
-      <p>
-        <small
-          >RANCH, HOT, MILD, HBBQ, X-HOT, LEMON PEPPER, HONEY GARLIC, MILD/HOT
+      <p>RANCH, HOT, MILD, HBBQ, X-HOT, LEMON PEPPER, HONEY GARLIC, MILD/HOT
           GARLIC PEPPER, HOT/HBBQ, HONEY GARLIC PEPPER, MILD/HOT HONEY, MILD/HOT
-          RANCH</small
-        >
+          RANCH
       </p>
       <p>
-        <small><strong>$.75 FOR ALL FLATS/DRUMS (10PC OR LESS)</strong></small>
+        $.75 FOR ALL FLATS/DRUMS (10PC OR LESS)
       </p>
       <p>
-        <small><strong>$.50 FOR ALL SPLIT FLAVORS</strong></small>
+        $.50 FOR ALL SPLIT FLAVORS
       </p>
       <p>
-        <small><strong>$.30 FOR EXTRA WET</strong></small>
+        $.30 FOR EXTRA WET
       </p>
       <hr class="endingHr" />
+      <!-- wings end -->
+      <!-- not wings start -->
       <h3 class="food-category-name text-left">OTHER THAN WINGS</h3>
       <div id="notwing-section"></div>
       <hr class="endingHr"/>
-      <h3 class="food-category-name text-left">SIDES</h3>
-      <div class="container" id="sides-section"></div>
-      <p>
-        <small><strong>CHICKEN/FISH FRIED OR GRILLED</strong></small>
-      </p>
-      <hr class="endingHr" />
+      <!-- not wings end -->
+      <!-- combos start -->
       <h3 class="food-category-name text-left">
         COMBOS <span><small>INCLUES ONE SIDE &amp; DRINK</small></span>
       </h3>
       <div id="combo-section"></div>
       <hr class="endingHr" />
-      <h3 class="food-category-name text-left">
-        DRINKS/DESSERTS</small></span>
-      </h3>
-      <div id="drinks-section"></div>
-      <p class="disclaimer my-0 py-0">*PRICES AND PRODUCTS SUBJECT TO CHANGE WITHOUT NOTICE</p>
-      <p class="disclaimer my-0 py-0">*ONLINE PRICES AND MAY NOT MATCH IN STORE PRICES</p>
+      <!-- combos end -->
+      <div id="drinks-and-sides-div" class="row">
+        <div id="sides" class="col-md-6">
+          <!-- sides start -->
+      <h3 class="food-category-name">SIDES</h3>
+      <div id="sides-section"></div>
+      <p>
+        <small><strong>CHICKEN/FISH FRIED OR GRILLED</strong></small>
+      </p>
       <hr class="endingHr" />
+      <!-- sides end -->
+        </div>
+        <div id="drink" class="col-md-6">
+          <!-- drinks and desserts start -->
+      <h3 class="food-category-name text-left">
+          DRINKS/DESSERTS
+        </h3>
+        <div id="drinks-section"></div>
+        <p class="disclaimer my-0 py-0">*PRICES AND PRODUCTS SUBJECT TO CHANGE WITHOUT NOTICE</p>
+        <p class="disclaimer my-0 py-0">*ONLINE PRICES AND MAY NOT MATCH IN STORE PRICES</p>
+        <hr class="endingHr" />
+        <!-- drinks and desserts end -->
+        </div>
+      </div>
     </section>
 
     <!-- Main Content endss -->
@@ -132,9 +155,9 @@
       <div id="location" class="row">
         <div id="address" class="col-md-6">
           <p><strong>ADDRESS:</strong></p>
-          <p>JR'S WINGS AND THINGS</p>
-          <p>5731 TRAMMEL RD</p>
-          <p>LAKE CITY, GA 30260</p>
+          <p class="mb-0">JR'S WINGS AND THINGS</p>
+          <p class="mb-0">5731 TRAMMEL RD</p>
+          <p class="mb-0">LAKE CITY, GA 30260</p>
           </p>
         </div>
         <div class="col-md-6">

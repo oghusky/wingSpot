@@ -3,107 +3,19 @@
   --main-black: #212121;
   --dark-grey: #263238;
   --main-grey: #a5acaf;
-  --main-white: #fafafa;
+  --main-white: #f5f5f5;
+  --bright-white: #fff;
+}
+* {
+  box-sizing: border-box;
+  border-radius: 0;
 }
 body,
 html {
   margin: 0;
   padding: 0;
-  background-color: var(--main-grey);
-  font-family: "Roboto", sans-serif;
+  background-color: var(--bright-white);
 }
-#whole-nav {
-  background-color: var(--main-black);
-}
-.jumbotron {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 0;
-  height: 100vh;
-}
-.container {
-  background-color: var(--main-red);
-  padding: 1rem;
-}
-#inner-jumbotron {
-  width: 95%;
-  height: 95%;
-  margin: 0 auto;
-  background-color: var(--main-black);
-  padding: 1rem;
-}
-#food-categories h3,
-#food-categories small,
-#flavor-names,
-#sides-section span,
-#drinks-section {
-  padding-left: 1.5rem;
-}
-#flavor-names {
-  margin: 1rem 0 0 0;
-}
-#wing-section,
-#notwing-section,
-#sides-section,
-#combo-section {
-  width: 100%;
-  margin: 0 auto;
-}
-.card,
-.card img {
-  border-radius: 0;
-  padding: 0;
-}
-.card-body {
-  width: 220px;
-}
-.product-div {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  margin: -1rem 0.5rem;
-  color: var(--main-white);
-  width: 200px;
-  height: 150px;
-  padding: 0;
-}
-.product-div hr,
-#combo-section {
-  margin: 0 0 10px 0;
-  padding: 0;
-}
-.product-price {
-  color: var(--main-black);
-}
-.drinks-div {
-  color: var(--main-white);
-}
-.sides-div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0.5rem;
-  color: var(--main-white);
-  padding-left: 1.5rem;
-}
-form {
-  width: 60%;
-  margin: 0 auto;
-}
-.form-control {
-  border-radius: 0;
-}
-#contact-section {
-  background-color: var(--main-black);
-}
-#contact-section h2 {
-  color: var(--main-red);
-}
-#contact-section button {
-  background-color: var(--main-red);
-  color: var(--main-white);
-}
-#contact-section button:hover {
-  background-color: var(--main-white);
-  color: var(--main-red);
+hr {
+  border: 1px solid var(--main-red);
 }

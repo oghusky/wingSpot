@@ -1,0 +1,37 @@
+[
+  {
+    "dayOfWeek": "Sunday",
+    "dealType": "We Are Closed",
+    "dealPrice": "See You On Monday"
+  },
+  {
+    "dayOfWeek": "Monday",
+    "dealType": "Chicken Tenders",
+    "dealPrice": "6.15"
+  },
+  {
+    "dayOfWeek": "Tuesday",
+    "dealType": "Fried Chicken Sandwich",
+    "dealPrice": "6.15"
+  },
+  {
+    "dayOfWeek": "Wednesday",
+    "dealType": "10 Wings/ Burger",
+    "dealPrice": "6.75"
+  },
+  {
+    "dayOfWeek": "Thursday",
+    "dealType": "Pork Chop",
+    "dealPrice": "6.50"
+  },
+  {
+    "dayOfWeek": "Friday",
+    "dealType": "Fish",
+    "dealPrice": "6.50"
+  },
+  {
+    "dayOfWeek": "Saturday",
+    "dealType": "Fish",
+    "dealPrice": "6.50"
+  }
+]
