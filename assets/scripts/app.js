@@ -13,11 +13,12 @@ $.ajax({
       const productType = product.typeOfItem;
       const productPrice = product.priceOfItem;
       const productDiv = document.createElement("div");
-      productDiv.classList.add("col-md-2");
+      const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
+      productDiv.classList.add(...classesToAdd);
       wingSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
-      <h5>$${productPrice}</h5>
+      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+      <p class="mx-0 my-0 product-price">$${productPrice}</p>
       `;
     });
   })
@@ -37,11 +38,12 @@ $.ajax({
       const productType = product.typeOfItem;
       const productPrice = product.priceOfItem;
       const productDiv = document.createElement("div");
-      productDiv.classList.add("col-md-3");
+      const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
+      productDiv.classList.add(...classesToAdd);
       notWingSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
-      <h5>$ ${productPrice}</h5>`;
+      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+      <p class="mx-0 my-0 product-price">$ ${productPrice}</p>`;
     });
   })
   .catch(err => console.log(err));
@@ -60,10 +62,12 @@ $.ajax({
       const lgSize = product.lgSize;
       const famSize = product.famSize;
       const productDiv = document.createElement("div");
+      const classesToAdd = ["my-1"];
+      productDiv.classList.add(...classesToAdd);
       sidesSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5>${productType}:</h5>
-      <h6><span>REG:</span> <span class="product-price">$${regSize}</span> <span>LG:</span> <span class="product-price">$${lgSize}</span> <span>FAM:</span> <span class="product-price">$${famSize}</span></h6>`;
+      <p class="mx-0 my-0 product-type">${productType}:</p>
+      <p class="mx-0 my-0 product-price"><span>REG:</span> <span class="product-price">$${regSize}</span> <span>LG:</span> <span class="product-price">$${lgSize}</span> <span>FAM:</span> <span class="product-price">$${famSize}</span></p>`;
     });
   })
   .catch(err => console.log(err));
@@ -81,11 +85,12 @@ $.ajax({
     const productType = product.typeOfItem;
     const productPrice = product.priceOfItem;
     const productDiv = document.createElement("div");
-    productDiv.classList.add("col-md-3");
+    const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
+    productDiv.classList.add(...classesToAdd);
     comboSection.appendChild(productDiv);
     productDiv.innerHTML = `
-      <h5 class="combo-name"><span>${productNumOfPieces}</span> <span>${productType}</span></h5>
-      <h5 class="combo-price">$${productPrice}</h5>`;
+      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+      <p class="mx-0 my-0 product-price">$${productPrice}</p>`;
   });
 });
 // points to drink file
@@ -104,11 +109,13 @@ $.ajax({
       const halfSize = product.halfSize;
       const gallonSize = product.gallonSize;
       const productDiv = document.createElement("div");
+      const classesToAdd = ["my-1"];
+      productDiv.classList.add(...classesToAdd);
       drinksSection.appendChild(productDiv);
       productDiv.innerHTML = `
-      <h5>${productType}:</h5>
-      <h6><span>REG:</span> <span class="product-price">$${regSize}</span> <span>JUMBO:</span> <span class="product-price">$${jumboSize}</span> <span>HALF GALLON:</span> <span class="product-price">$${halfSize}</span>
-      <span>GALLON:</span> <span class="product-price">$${gallonSize}</span></h6>`;
+      <p class="mx-0 my-0 product-type">${productType}:</p>
+      <p class="mx-0 my-0 product-price"><span>REG:</span> <span class="product-price">$${regSize}</span> <span>JUMBO:</span> <span class="product-price">$${jumboSize}</span> <span>HALF GALLON:</span> <span class="product-price">$${halfSize}</span>
+      <span>GALLON:</span> <span class="product-price">$${gallonSize}</span></p>`;
     });
   })
   .catch(err => console.log(err));
@@ -126,10 +133,9 @@ $.ajax({
       const dealType = response[day].dealType;
       const dealPrice = response[day].dealPrice;
       const dealOfDay = document.querySelector("#deals-div");
-      dealOfDay.innerHTML = `<div class="col-md-6">
-      <h5>${dayOfWeek} Deal Of The Day</h5>
-      <h5>${dealType}</h5> <h5>${dealPrice}</h5>
-      </div>`;
+      dealOfDay.innerHTML = `
+      <h5>${dealType}</h5> <h5>$${dealPrice}</h5>
+      `;
     }
     showDeal();
   })
