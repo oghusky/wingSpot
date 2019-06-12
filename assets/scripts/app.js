@@ -134,7 +134,8 @@ $.ajax({
       const dealPrice = response[day].dealPrice;
       const dealOfDay = document.querySelector("#deals-div");
       dealOfDay.innerHTML = `
-      <h5>${dealType}</h5> <h5>$${dealPrice}</h5>
+      <h5 class="my-0">Deal of the Day</h5>
+      <h5 class="my-0">${dealType}</h5> <h5>$${dealPrice}</h5>
       `;
     }
     showDeal();
