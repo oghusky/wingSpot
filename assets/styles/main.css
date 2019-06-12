@@ -23,7 +23,7 @@ nav {
   background-color: var(--main-black);
 }
 .jumbotron {
-  background: url("/assets/images/jumboBackground.png");
+  background: url("https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.nuggetmarket.com%2Fmedia%2Fimages%2Fcrazy_hot_wings.jpg&imgrefurl=https%3A%2F%2Fwww.nuggetmarket.com%2Frecipes%2F223%2Fcrazy-hot-wings%2F&docid=y5Ydk2tyscsNvM&tbnid=KJ1ARjI15Ve-uM%3A&vet=10ahUKEwjSnuyu5OTiAhUD11kKHcZfDwEQMwi8ASgwMDA..i&w=600&h=400&bih=625&biw=1366&q=hot%20wings&ved=0ahUKEwjSnuyu5OTiAhUD11kKHcZfDwEQMwi8ASgwMDA&iact=mrc&uact=8");
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
