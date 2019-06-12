@@ -24,7 +24,7 @@ nav {
 }
 .jumbotron {
   background-color: var(--main-red);
-  background-image: url("/assets/images/jumboBackground.png");
+  background-image: url("./assets/images/jumboBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 90vh;
