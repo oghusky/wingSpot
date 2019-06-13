@@ -126,9 +126,6 @@ h3 {
 	.product-type {
 		font-size: 0.9rem;
 	}
-	.page-break-img {
-		background-position-x: -500px;
-	}
 }
 @media only screen and (max-width: 460px) {
 	.jumbotron {
