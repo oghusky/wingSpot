@@ -26,26 +26,23 @@ nav {
   background-image: url("../images/jumboBackground.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 90vh;
   border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #page-header {
   margin: 0;
   padding: 0;
-  display: block;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 h1.jumbo-header {
   color: var(--bright-white);
   width: 100%;
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
   font-weight: 700;
-  font-size: 5.25em;
+  font-size: 8vw;
   line-height: 1em;
 }
 #deals-and-events {
@@ -58,7 +55,7 @@ h1.jumbo-header {
   position: relative;
   top: 50%;
   transform: translateY(-150%);
-  font-size: 2.1rem;
+  font-size: 3vw;
   font-weight: bold;
 }
 #deals-div {
@@ -72,6 +69,9 @@ h1.jumbo-header {
 #menu-header {
   font-size: 5em;
 }
+h3 {
+  font-weight: bold;
+}
 .product-type {
   color: var(--main-red);
   font-weight: bold;
@@ -80,10 +80,10 @@ h1.jumbo-header {
   font-weight: bold;
 }
 .page-break-img {
-  background-image: url("../images/jumbotronWingsBG.jpg");
+  background-image: url("../images/jumboBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -70px;
+  background-position: 0 -170px;
   background-attachment: fixed;
   width: 100%;
   height: 10em;

@@ -141,3 +141,11 @@ $.ajax({
     showDeal();
   })
   .catch(err => console.log(err));
+
+// setup parallax effect
+const pageTitle = document.querySelector(".jumbotron");
+const pageBreakImg = document.querySelector(".page-break-img");
+window.addEventListener("scroll", function() {
+  let offset = window.pageYOffset;
+  pageTitle.style.backgroundPositionY = offset * 0.4 + "px";
+});
