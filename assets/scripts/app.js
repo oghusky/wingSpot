@@ -142,7 +142,7 @@ $.ajax({
   })
   .catch(err => console.log(err));
 
-// setup parallax effect
+// setup parallax effect on jumbotron
 const pageTitle = document.querySelector(".jumbotron");
 const pageBreakImg = document.querySelector(".page-break-img");
 window.addEventListener("scroll", function() {

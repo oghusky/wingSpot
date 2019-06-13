@@ -10,6 +10,9 @@
   box-sizing: border-box;
   border-radius: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body,
 html {
   background-color: var(--bright-white);
@@ -83,7 +86,6 @@ h3 {
   background-image: url("../images/jumboBackground.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 -170px;
   background-attachment: fixed;
   width: 100%;
   height: 10em;
