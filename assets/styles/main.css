@@ -86,6 +86,7 @@ h1.jumbo-header {
 }
 #menu-header {
 	font-size: 5em;
+	margin-top: 2rem;
 }
 h3 {
 	font-weight: bold;
@@ -125,6 +126,10 @@ h3 {
 
 #address p:not(:first-child) {
 	font-size: 1.1rem;
+}
+
+#drinks-and-sides-div {
+	margin-top: 2rem;
 }
 
 /* end perry work */
