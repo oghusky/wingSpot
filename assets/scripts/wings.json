@@ -1,36 +1,30 @@
 [
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 6,
     "typeOfItem": "Wings",
     "priceOfItem": "4.63"
   },
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 10,
     "typeOfItem": "Wings",
     "priceOfItem": "6.60"
   },
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 15,
     "typeOfItem": "Wings",
     "priceOfItem": "8.75"
   },
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 20,
     "typeOfItem": "Wings",
     "priceOfItem": "10.25"
   },
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 30,
     "typeOfItem": "Wings",
     "priceOfItem": "17.00"
   },
   {
-    "productImage": "./assets/images/jumbotronWingsBG.jpg",
     "numOfPieces": 50,
     "typeOfItem": "Wings",
     "priceOfItem": "27.50"

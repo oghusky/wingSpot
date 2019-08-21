@@ -25,6 +25,13 @@ hr {
 nav {
 	background-color: var(--main-black);
 }
+h3 {
+	font-weight: bold;
+}
+form{
+	width: 70%;
+	margin: 0 auto 1rem auto;
+}
 .jumbotron {
 	background-image: url("../images/jumboBackground.png");
 	background-size: cover;
@@ -43,7 +50,7 @@ h1.jumbo-header {
 	color: var(--bright-white);
 	width: 100%;
 	text-align: center;
-	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 	font-weight: 700;
 	font-size: 8vw;
 	line-height: 1em;
@@ -71,9 +78,6 @@ h1.jumbo-header {
 }
 #menu-header {
 	font-size: 5em;
-}
-h3 {
-	font-weight: bold;
 }
 #sides-section-hr {
 	margin-top: 1.8rem;
