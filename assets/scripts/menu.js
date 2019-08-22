@@ -32,13 +32,11 @@ const menu = {
             "priceOfItem": "27.50"
         },
         {
-            "productImage": "./assets/images/boneless wings.jpg",
             "numOfPieces": 6,
             "typeOfItem": "Boneless Wings",
             "priceOfItem": "4.75"
         },
         {
-            "productImage": "./assets/images/boneless wings.jpg",
             "numOfPieces": 10,
             "typeOfItem": "Boneless Wings",
             "priceOfItem": "6.60"
@@ -66,12 +64,7 @@ const menu = {
             "priceOfItem": "2.75"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Whiting Sandwich",
-            "priceOfItem": "4.25"
-        },
-        {
-            "numOfPieces": "Single",
+            "numOfPieces": " ",
             "typeOfItem": "Single Whiting",
             "priceOfItem": "2.75"
         },
@@ -82,11 +75,6 @@ const menu = {
         },
         {
             "numOfPieces": "Single",
-            "typeOfItem": "Chicken Sandwich",
-            "priceOfItem": "4.00"
-        },
-        {
-            "numOfPieces": "Single",
             "typeOfItem": "Philly",
             "priceOfItem": "4.75"
         },
@@ -94,11 +82,6 @@ const menu = {
             "numOfPieces": "Single",
             "typeOfItem": "Burger",
             "priceOfItem": "4.20"
-        },
-        {
-            "numOfPieces": "Not Combo",
-            "typeOfItem": "Liver/Gizzards",
-            "priceOfItem": "4.15"
         },
         {
             "numOfPieces": "Single",
@@ -116,9 +99,24 @@ const menu = {
             "priceOfItem": "1.40"
         },
         {
+            "numOfPieces": " ",
+            "typeOfItem": "Liver/Gizzards",
+            "priceOfItem": "4.15"
+        },
+        {
+            "numOfPieces": "Single",
+            "typeOfItem": "Chicken Sandwich",
+            "priceOfItem": "4.00"
+        },
+        {
             "numOfPieces": "Single",
             "typeOfItem": "Ultimate Dog",
             "priceOfItem": "1.89"
+        },
+        {
+            "numOfPieces": "Single",
+            "typeOfItem": "Whiting Sandwich",
+            "priceOfItem": "4.25"
         }
     ],
     combos: [
@@ -183,7 +181,7 @@ const menu = {
             "priceOfItem": "8.75"
         },
         {
-            "numOfPieces": "Combo",
+            "numOfPieces": "",
             "typeOfItem": "Liver/Gizzard",
             "priceOfItem": "6.51"
         },
@@ -201,11 +199,6 @@ const menu = {
             "numOfPieces": 2,
             "typeOfItem": "Ultimate Dogs",
             "priceOfItem": "6.20"
-        },
-        {
-            "numOfPieces": "",
-            "typeOfItem": "Philly (Steak/ Chicken)",
-            "priceOfItem": "7.60"
         },
         {
             "numOfPieces": "",
@@ -241,15 +234,14 @@ const menu = {
             "numOfPieces": "",
             "typeOfItem": "Burger",
             "priceOfItem": "7.36"
+        },
+        {
+            "numOfPieces": "",
+            "typeOfItem": "Philly (Steak/ Chicken)",
+            "priceOfItem": "7.60"
         }
     ],
     sides: [
-        {
-            "typeOfItem": "Fries",
-            "regSize": "1.85",
-            "lgSize": "3.50",
-            "famSize": "4.50"
-        },
         {
             "typeOfItem": "Onion Rings",
             "regSize": "1.85",
@@ -285,6 +277,12 @@ const menu = {
             "regSize": "4.50",
             "lgSize": "6.50",
             "famSize": ""
+        },
+        {
+            "typeOfItem": "Fries",
+            "regSize": "1.85",
+            "lgSize": "3.50",
+            "famSize": "4.50"
         }
     ],
     drinks: [
@@ -355,4 +353,3 @@ const menu = {
         }
     ]
 }
-const floop = document.querySelector;

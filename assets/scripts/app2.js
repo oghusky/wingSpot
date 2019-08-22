@@ -14,81 +14,20 @@ $(".navbar-nav>li>a, .navbar-brand").on("click", function () {
 // wings section
 const wingSection = document.querySelector("#wing-section");
 wingSection.classList.add("row");
-menu.wings.forEach(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
-    productDiv.classList.add(...classesToAdd);
-    wingSection.appendChild(productDiv);
-    productDiv.innerHTML = `
-<p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-<p class="mx-0 my-0 product-price">$${productPrice}</p>
-`;
-});
-// notwing section
+
+// // notwing section
 const notWingSection = document.querySelector("#notwing-section");
 notWingSection.classList.add("row");
-menu.moreFood.forEach(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
-    productDiv.classList.add(...classesToAdd);
-    notWingSection.appendChild(productDiv);
-    productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-      <p class="mx-0 my-0 product-price">$ ${productPrice}</p>`;
-});
-// sides section
+
+// // sides section
 const sidesSection = document.querySelector("#sides-section");
-menu.sides.forEach(product => {
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const lgSize = product.lgSize;
-    const famSize = product.famSize;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["my-1"];
-    productDiv.classList.add(...classesToAdd);
-    sidesSection.appendChild(productDiv);
-    productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type">${productType}:</p>
-      <p class="mx-0 my-0 product-price"><span>REG:</span> <span class="product-price">$${regSize}</span> <span>LG:</span> <span class="product-price">$${lgSize}</span> <span>FAM:</span> <span class="product-price">$${famSize}</span></p>`;
-});
-// combo section
+// // combo section
 const comboSection = document.querySelector("#combo-section");
 comboSection.classList.add("row");
-menu.combos.forEach(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
-    productDiv.classList.add(...classesToAdd);
-    comboSection.appendChild(productDiv);
-    productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-      <p class="mx-0 my-0 product-price">$${productPrice}</p>`;
-});
-// drinks section
+
+// // drinks section
 const drinksSection = document.querySelector("#drinks-section");
-menu.drinks.forEach(product => {
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const jumboSize = product.jumboSize;
-    const halfSize = product.halfSize;
-    const gallonSize = product.gallonSize;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["my-1"];
-    productDiv.classList.add(...classesToAdd);
-    drinksSection.appendChild(productDiv);
-    productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type">${productType}:</p>
-      <p class="mx-0 my-0 product-price"><span>REG:</span> <span class="product-price">$${regSize}</span> <span>JUMBO:</span> <span class="product-price">$${jumboSize}</span> <span>HALF GALLON:</span> <span class="product-price">$${halfSize}</span>
-      <span>GALLON:</span> <span class="product-price">$${gallonSize}</span></p>`;
-});
+
 
 function showDeal() {
     const today = new Date().getDay();
@@ -102,77 +41,181 @@ function showDeal() {
       `;
 }
 showDeal();
-// selects and options in order form
-const sizeCountDiv = document.querySelector("#size-count");
-const menuSelects = document.querySelector("#menu-selects");
-$("#type-of-product").on("change", function () {
-    let selectValue = $(this).val();
-    sizeCountDiv.innerHTML = `<option selected>...</option>`;
+// // selects and options in order form
+// const sizeCountDiv = document.querySelector("#size-count");
+// const menuSelects = document.querySelector("#menu-selects");
+// $("#type-of-product").on("change", function () {
+//     let selectValue = $(this).val();
+//     sizeCountDiv.innerHTML = `<option selected>...</option>`;
 
-    if (selectValue === "wings") {
-        menu.wings.forEach(wing => {
-            const option = document.createElement("option");
-            option.textContent = `${wing.numOfPieces} ${wing.typeOfItem}`;
-            option.setAttribute("value", `${wing.numOfPieces} ${wing.typeOfItem}`);
-            option.classList.add("count-option");
-            sizeCountDiv.appendChild(option);
-        })
-    }
-    if (selectValue === "more-than-wings") {
-        menu.moreFood.forEach(food => {
-            const option = document.createElement("option");
-            option.textContent = `${food.numOfPieces} ${food.typeOfItem}`;
-            option.setAttribute("value", `${food.numOfPieces} ${food.typeOfItem}`);
-            option.classList.add("count-option");
-            sizeCountDiv.appendChild(option);
-        })
-    }
-    if (selectValue === "combos") {
-        menu.combos.forEach(combo => {
-            const option = document.createElement("option");
-            option.textContent = `${combo.numOfPieces} ${combo.typeOfItem}`;
-            option.setAttribute("value", `${combo.numOfPieces} ${combo.typeOfItem}`);
-            option.classList.add("count-option");
-            sizeCountDiv.appendChild(option);
-        })
-    }
-    if (selectValue === "drinks-and-desserts") {
-        menu.drinks.forEach(drink => {
-            const option = document.createElement("option");
-            option.textContent = `${drink.typeOfItem}`;
-            option.setAttribute("value", `${drink.typeOfItem}`);
-            option.classList.add("count-option");
-            sizeCountDiv.appendChild(option);
-        })
-    }
-    if (selectValue === "sides") {
-        menu.sides.forEach(side => {
-            const option = document.createElement("option");
-            option.textContent = `${side.typeOfItem}`;
-            option.setAttribute("value", `${side.typeOfItem}`);
-            option.classList.add("count-option");
-            sizeCountDiv.appendChild(option);
-        })
-    }
+//     if (selectValue === "wings") {
+//         menu.wings.forEach(wing => {
+//             const option = document.createElement("option");
+//             option.textContent = `${wing.numOfPieces} ${wing.typeOfItem}`;
+//             option.setAttribute("value", `${wing.numOfPieces} ${wing.typeOfItem}`);
+//             option.classList.add("count-option");
+//             sizeCountDiv.appendChild(option);
+//         })
+//     }
+//     if (selectValue === "more-than-wings") {
+//         menu.moreFood.forEach(food => {
+//             const option = document.createElement("option");
+//             option.textContent = `${food.numOfPieces} ${food.typeOfItem}`;
+//             option.setAttribute("value", `${food.numOfPieces} ${food.typeOfItem}`);
+//             option.classList.add("count-option");
+//             sizeCountDiv.appendChild(option);
+//         })
+//     }
+//     if (selectValue === "combos") {
+//         menu.combos.forEach(combo => {
+//             const option = document.createElement("option");
+//             option.textContent = `${combo.numOfPieces} ${combo.typeOfItem}`;
+//             option.setAttribute("value", `${combo.numOfPieces} ${combo.typeOfItem}`);
+//             option.classList.add("count-option");
+//             sizeCountDiv.appendChild(option);
+//         })
+//     }
+//     if (selectValue === "drinks-and-desserts") {
+//         menu.drinks.forEach(drink => {
+//             const option = document.createElement("option");
+//             option.textContent = `${drink.typeOfItem}`;
+//             option.setAttribute("value", `${drink.typeOfItem}`);
+//             option.classList.add("count-option");
+//             sizeCountDiv.appendChild(option);
+//         })
+//     }
+//     if (selectValue === "sides") {
+//         menu.sides.forEach(side => {
+//             const option = document.createElement("option");
+//             option.textContent = `${side.typeOfItem}`;
+//             option.setAttribute("value", `${side.typeOfItem}`);
+//             option.classList.add("count-option");
+//             sizeCountDiv.appendChild(option);
+//         })
+//     }
+// })
+// // checks value of size-count select and makes dynamic changes
+// $("#size-count").on("change", function () {
+//     let selectValue = $(this).val();
+//     const newSelect = document.createElement("select");
+//     newSelect.innerHTML = "<option>...</option>";
+//     if ($("#size-count") === "...") {
+
+//     }
+//     if (selectValue === "Tea/Lemonade") {
+//         const newSelect = document.createElement("select");
+//         newSelect.innerHTML = "<option>...</option>";
+//         let classesToAdd = ["custom-select", "mt-3"];
+//         newSelect.hasAttribute("id", "item-prices");
+//         newSelect.classList.add(...classesToAdd);
+//         menuSelects.appendChild(newSelect);
+//         menu.drinks.map(drink => {
+//             if (drink.hasOwnProperty("typeOfItem") && Object.values(drink).indexOf("Tea/Lemonade") > -1) {
+//                 newSelect.innerHTML = `
+//                         <option>...</option>
+//                         <option>$${drink.regSize} - Reg Size</option>
+//                         <option>$${drink.jumboSize} - Jumbo Size</option>
+//                         <option>$${drink.halfSize} - Half Gallon</option>
+//                         <option>$${drink.gallonSize} - Gallon</option>
+//                     `;
+//             }
+//         })
+//     }
+//     if (selectValue === "Soda") {
+//         const newSelect = document.createElement("select");
+//         newSelect.innerHTML = "<option>...</option>";
+//         let classesToAdd = ["custom-select", "mt-3"];
+//         newSelect.classList.add(...classesToAdd);
+//         menuSelects.appendChild(newSelect);
+//         menu.drinks.map(drink => {
+//             if (drink.hasOwnProperty("typeOfItem") && Object.values(drink).indexOf("Soda") > -1) {
+//                 newSelect.innerHTML = `
+//                         <option>...</option>
+//                         <option>$${drink.regSize} - Reg Size</option>
+//                         <option>$${drink.jumboSize} - Jumbo Size</option>
+//                         <option>$${drink.halfSize} - Half Gallon</option>
+//                         <option>$${drink.gallonSize} - Gallon</option>
+//                     `;
+//             }
+//         })
+//     }
+// })
+menu.wings.map(product => {
+    const productNumOfPieces = product.numOfPieces;
+    const productType = product.typeOfItem;
+    const productPrice = product.priceOfItem;
+    const productDiv = document.createElement("div");
+    const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
+    productDiv.classList.add(...classesToAdd);
+    wingSection.appendChild(productDiv);
+    productDiv.innerHTML = `
+    <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+    <p class="mx-0 my-0 product-price">$${productPrice}</p>
+    `;
 })
-// checks value of size-count select and makes dynamic changes
-$("#size-count").on("change", function () {
-    let selectValue = $(this).val();
-    if (selectValue === "Tea/Lemonade") {
-        const newSelect = document.createElement("select");
-        newSelect.innerHTML = "<option>...</option>";
-        let classesToAdd = ["custom-select", "mt-3"];
-        newSelect.classList.add(...classesToAdd);
-        menuSelects.appendChild(newSelect);
-        menu.drinks.map(drink => {
-            if (drink.hasOwnProperty("typeOfItem") && Object.values(drink).indexOf("Tea/Lemonade") > -1) {
-                newSelect.innerHTML = `
-                    <option>$${drink.regSize} - Reg Size</option>
-                    <option>$${drink.jumboSize} - Jumbo Size</option>
-                    <option>$${drink.halfSize} - Half Gallon</option>
-                    <option>$${drink.gallonSize} - Gallon</option>
-                `;
-            }
-        })
-    }
+menu.moreFood.map(product => {
+    const productNumOfPieces = product.numOfPieces;
+    const productType = product.typeOfItem;
+    const productPrice = product.priceOfItem;
+    const productDiv = document.createElement("div");
+    const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
+    productDiv.classList.add(...classesToAdd);
+    notWingSection.appendChild(productDiv);
+    productDiv.innerHTML = `
+      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+      <p class="mx-0 my-0 product-price">$ ${productPrice}</p>`;
+})
+
+menu.sides.map(product => {
+    const productType = product.typeOfItem;
+    const regSize = product.regSize;
+    const lgSize = product.lgSize;
+    const famSize = product.famSize;
+    const productDiv = document.createElement("div");
+    // const classesToAdd = ["row"];
+    // productDiv.classList.add(...classesToAdd);
+    sidesSection.appendChild(productDiv);
+    productDiv.innerHTML = `
+      <p class="ml-0 my-0 product-type">${productType}:</p>
+       <p class="ml-0 my-0 product-price"> <span>REG:</span>
+        <span class="product-price mx-1">$${regSize}</span> 
+        <span>LG:</span> <span class="product-price mx-1">$${lgSize}</span> 
+        <span  style="${famSize === "" ? "display: none;" : "display:inline;"}">FAM:</span> 
+        <span class="product-price mx-1" style="${famSize === "" ? "display: none;" : "display:inline;"}">$${famSize}</span>
+      </p>`;
+});
+menu.combos.map(product => {
+    const productNumOfPieces = product.numOfPieces;
+    const productType = product.typeOfItem;
+    const productPrice = product.priceOfItem;
+    const productDiv = document.createElement("div");
+    const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
+    productDiv.classList.add(...classesToAdd);
+    comboSection.appendChild(productDiv);
+    productDiv.innerHTML = `
+      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
+      <p class="mx-0 my-0 product-price">$${productPrice}</p>`;
+})
+menu.drinks.map(product => {
+    const productType = product.typeOfItem;
+    const regSize = product.regSize;
+    const jumboSize = product.jumboSize;
+    const halfSize = product.halfSize;
+    const gallonSize = product.gallonSize;
+    const productDiv = document.createElement("div");
+    const classesToAdd = ["my-1"];
+    productDiv.classList.add(...classesToAdd);
+    drinksSection.appendChild(productDiv);
+    productDiv.innerHTML = `
+      <p class="mx-0 my-0 product-type">${productType}:</p>
+      <p class="mx-0 my-0 product-price">
+        <span>REG:</span>
+        <span class="product-price">$${regSize}</span> 
+        <span style="${jumboSize === "" ? "display: none;" : "display:inline;"}">JUMBO:</span>
+        <span class="product-price" style="${jumboSize === "" ? "display: none;" : "display:inline;"}">$${jumboSize}</span> 
+        <span style="${halfSize === "" ? "display: none;" : "display:inline;"}">HALF GALLON:</span>
+        <span class="product-price" style="${halfSize === "" ? "display: none;" : "display:inline;"}>$${halfSize}</span>
+        <span style="${gallonSize === "" ? "display: none;" : "display:inline;"}>GALLON:</span>
+        <span class="product-price" style="${gallonSize == "" ? "visibility: hidden" : "visibility: visible"}">$${gallonSize}</span>
+      </p>`;
 })

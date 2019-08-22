@@ -32,6 +32,9 @@ form{
 	width: 70%;
 	margin: 0 auto 1rem auto;
 }
+p{
+	font-weight: 600;
+}
 .jumbotron {
 	background-image: url("../images/jumboBackground.png");
 	background-size: cover;
@@ -76,11 +79,26 @@ h1.jumbo-header {
 	background-color: var(--main-black);
 	padding: 1em;
 }
+#flavor-names{
+	margin-top: 1rem;
+	font-weight: 700;
+}
 #menu-header {
 	font-size: 5em;
 }
 #sides-section-hr {
 	margin-top: 1.8rem;
+}
+#contact-section{
+	background: var(--main-red);
+}
+#order-title{
+	color: var(--main-white);
+	font-weight: 700;
+}
+#order-btn{
+	background: var(--main-black);
+	color: var(--main-white);
 }
 .product-type {
 	color: var(--main-red);
@@ -103,9 +121,10 @@ h1.jumbo-header {
 	font-size: 3rem;
 	text-align: center;
 } */
-#address {
-	margin-top: 10%;
-	left: 14%;
+#address{
+	font-size: 50%;
+	text-align: center;
+	margin-top: 5%;
 }
 #address p {
 	font-size: 1.5rem;
@@ -115,6 +134,9 @@ h1.jumbo-header {
 	.jumbotron {
 		height: 90vh;
 		background-position-x: 30%;
+	}
+	.page-break-img{
+		background-position: center;
 	}
 	#sides-section {
 		display: grid;
@@ -126,8 +148,9 @@ h1.jumbo-header {
 		text-align: center;
 		margin-left: 0;
 	}
-	#address {
-		left: 26%;
+	#address{
+		font-size: 50%;
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 577px) {

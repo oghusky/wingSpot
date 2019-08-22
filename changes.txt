@@ -1,0 +1,7 @@
+=-take off empty drink values
+=-on iphone change font to center
+=-move submit to the right
+=-clean up gaps in "more than wings"
+=-drop "flavors" in "wings" margin
+=-change background position-x
+=-flavors in div col-6
