@@ -11,11 +11,12 @@ $(".navbar-nav>li>a, .navbar-brand").on("click", function () {
 //================renders menu text on page=====================
 // shows daily deals
 function showDeal() {
-    const today = new Date().getDay();
-    const day = today;
-    const dealType = menu.deals[day].dealType;
-    const dealPrice = menu.deals[day].dealPrice;
-    const dealOfDay = document.querySelector("#deals-div");
+    const today = new Date().getDay(),
+        day = today,
+        dealType = menu.deals[day].dealType,
+        dealPrice = menu.deals[day].dealPrice,
+        dealOfDay = document.querySelector("#deals-div");
+
     dealOfDay.innerHTML = `
       <h5 class="my-0">Deal of the Day</h5>
       <h5 class="my-0">${dealType}</h5> <h5>$${dealPrice}</h5>
@@ -27,30 +28,33 @@ showDeal();
 // wings section
 menu.wings.map(product => {
     // wings section
-    const wingSection = document.querySelector("#wing-section");
+    const wingSection = document.querySelector("#wing-section"),
+        productNumOfPieces = product.numOfPieces,
+        productType = product.typeOfItem,
+        productPrice = product.priceOfItem,
+        productDiv = document.createElement("div"),
+        classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
+
     wingSection.classList.add("row");
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
     productDiv.classList.add(...classesToAdd);
     wingSection.appendChild(productDiv);
     productDiv.innerHTML = `
     <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
     <p class="mx-0 my-0 product-price">$${productPrice}</p>
     `;
-})
+});
+
 // more food section
 menu.moreFood.map(product => {
     // // notwing section
-    const notWingSection = document.querySelector("#notwing-section");
+    const notWingSection = document.querySelector("#notwing-section"),
+        productNumOfPieces = product.numOfPieces,
+        productType = product.typeOfItem,
+        productPrice = product.priceOfItem,
+        productDiv = document.createElement("div"),
+        classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
+
     notWingSection.classList.add("row");
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
     productDiv.classList.add(...classesToAdd);
     notWingSection.appendChild(productDiv);
     productDiv.innerHTML = `
@@ -60,12 +64,13 @@ menu.moreFood.map(product => {
 // sides section
 menu.sides.map(product => {
     // // sides section
-    const sidesSection = document.querySelector("#sides-section");
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const lgSize = product.lgSize;
-    const famSize = product.famSize;
-    const productDiv = document.createElement("div");
+    const sidesSection = document.querySelector("#sides-section"),
+        productType = product.typeOfItem,
+        regSize = product.regSize,
+        lgSize = product.lgSize,
+        famSize = product.famSize,
+        productDiv = document.createElement("div");
+
     sidesSection.appendChild(productDiv);
     productDiv.innerHTML = `
       <p class="ml-0 my-0 product-type">${productType}:</p>
@@ -79,13 +84,14 @@ menu.sides.map(product => {
 // combos section
 menu.combos.map(product => {
     // // combo section
-    const comboSection = document.querySelector("#combo-section");
+    const comboSection = document.querySelector("#combo-section"),
+        productNumOfPieces = product.numOfPieces,
+        productType = product.typeOfItem,
+        productPrice = product.priceOfItem,
+        productDiv = document.createElement("div"),
+        classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
+
     comboSection.classList.add("row");
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
     productDiv.classList.add(...classesToAdd);
     comboSection.appendChild(productDiv);
     productDiv.innerHTML = `
@@ -118,7 +124,8 @@ menu.drinks.map(product => {
         <span style="${gallonSize === "" ? "display: none;" : "display:inline;"}>GALLON:</span>
         <span class="product-price" style="${gallonSize === "" ? "visibility: hidden" : "visibility: visible"}">$${gallonSize}</span>
       </p>`;
-})
+});
+
 // =================renders Order Form dynamically=============
 document.querySelector("#menu-selects").addEventListener("change", function () {
     // first select. hard coded in html
