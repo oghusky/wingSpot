@@ -1,181 +1,73 @@
 
-// adds paralax effect to jumbotron bg
-const pageTitle = document.querySelector(".jumbotron");
-const pageBreakImg = document.querySelector(".page-break-img");
 window.addEventListener("scroll", function () {
-    let offset = window.pageYOffset;
-    pageTitle.style.backgroundPositionY = offset * 0.4 + "px";
+  // adds paralax effect to jumbotron bg
+  const pageTitle = document.querySelector(".jumbotron");
+  let offset = window.pageYOffset;
+  pageTitle.style.backgroundPositionY = offset * 0.4 + "px";
 });
 // close navbar after link click
 $(".navbar-nav>li>a, .navbar-brand").on("click", function () {
-    $(".navbar-collapse").collapse("hide");
+  $(".navbar-collapse").collapse("hide");
 });
-//================shows menu text on page=====================
-// wings section
-const wingSection = document.querySelector("#wing-section");
-wingSection.classList.add("row");
-
-// // notwing section
-const notWingSection = document.querySelector("#notwing-section");
-notWingSection.classList.add("row");
-
-// // sides section
-const sidesSection = document.querySelector("#sides-section");
-// // combo section
-const comboSection = document.querySelector("#combo-section");
-comboSection.classList.add("row");
-
-// // drinks section
-const drinksSection = document.querySelector("#drinks-section");
-
-
+//================renders menu text on page=====================
+// shows daily deals
 function showDeal() {
-    const today = new Date().getDay();
-    const day = today;
-    const dealType = menu.deals[day].dealType;
-    const dealPrice = menu.deals[day].dealPrice;
-    const dealOfDay = document.querySelector("#deals-div");
-    dealOfDay.innerHTML = `
+  const today = new Date().getDay();
+  const day = today;
+  const dealType = menu.deals[day].dealType;
+  const dealPrice = menu.deals[day].dealPrice;
+  const dealOfDay = document.querySelector("#deals-div");
+  dealOfDay.innerHTML = `
       <h5 class="my-0">Deal of the Day</h5>
       <h5 class="my-0">${dealType}</h5> <h5>$${dealPrice}</h5>
       `;
 }
 showDeal();
-// // selects and options in order form
-// const sizeCountDiv = document.querySelector("#size-count");
-// const menuSelects = document.querySelector("#menu-selects");
-// $("#type-of-product").on("change", function () {
-//     let selectValue = $(this).val();
-//     sizeCountDiv.innerHTML = `<option selected>...</option>`;
-
-//     if (selectValue === "wings") {
-//         menu.wings.forEach(wing => {
-//             const option = document.createElement("option");
-//             option.textContent = `${wing.numOfPieces} ${wing.typeOfItem}`;
-//             option.setAttribute("value", `${wing.numOfPieces} ${wing.typeOfItem}`);
-//             option.classList.add("count-option");
-//             sizeCountDiv.appendChild(option);
-//         })
-//     }
-//     if (selectValue === "more-than-wings") {
-//         menu.moreFood.forEach(food => {
-//             const option = document.createElement("option");
-//             option.textContent = `${food.numOfPieces} ${food.typeOfItem}`;
-//             option.setAttribute("value", `${food.numOfPieces} ${food.typeOfItem}`);
-//             option.classList.add("count-option");
-//             sizeCountDiv.appendChild(option);
-//         })
-//     }
-//     if (selectValue === "combos") {
-//         menu.combos.forEach(combo => {
-//             const option = document.createElement("option");
-//             option.textContent = `${combo.numOfPieces} ${combo.typeOfItem}`;
-//             option.setAttribute("value", `${combo.numOfPieces} ${combo.typeOfItem}`);
-//             option.classList.add("count-option");
-//             sizeCountDiv.appendChild(option);
-//         })
-//     }
-//     if (selectValue === "drinks-and-desserts") {
-//         menu.drinks.forEach(drink => {
-//             const option = document.createElement("option");
-//             option.textContent = `${drink.typeOfItem}`;
-//             option.setAttribute("value", `${drink.typeOfItem}`);
-//             option.classList.add("count-option");
-//             sizeCountDiv.appendChild(option);
-//         })
-//     }
-//     if (selectValue === "sides") {
-//         menu.sides.forEach(side => {
-//             const option = document.createElement("option");
-//             option.textContent = `${side.typeOfItem}`;
-//             option.setAttribute("value", `${side.typeOfItem}`);
-//             option.classList.add("count-option");
-//             sizeCountDiv.appendChild(option);
-//         })
-//     }
-// })
-// // checks value of size-count select and makes dynamic changes
-// $("#size-count").on("change", function () {
-//     let selectValue = $(this).val();
-//     const newSelect = document.createElement("select");
-//     newSelect.innerHTML = "<option>...</option>";
-//     if ($("#size-count") === "...") {
-
-//     }
-//     if (selectValue === "Tea/Lemonade") {
-//         const newSelect = document.createElement("select");
-//         newSelect.innerHTML = "<option>...</option>";
-//         let classesToAdd = ["custom-select", "mt-3"];
-//         newSelect.hasAttribute("id", "item-prices");
-//         newSelect.classList.add(...classesToAdd);
-//         menuSelects.appendChild(newSelect);
-//         menu.drinks.map(drink => {
-//             if (drink.hasOwnProperty("typeOfItem") && Object.values(drink).indexOf("Tea/Lemonade") > -1) {
-//                 newSelect.innerHTML = `
-//                         <option>...</option>
-//                         <option>$${drink.regSize} - Reg Size</option>
-//                         <option>$${drink.jumboSize} - Jumbo Size</option>
-//                         <option>$${drink.halfSize} - Half Gallon</option>
-//                         <option>$${drink.gallonSize} - Gallon</option>
-//                     `;
-//             }
-//         })
-//     }
-//     if (selectValue === "Soda") {
-//         const newSelect = document.createElement("select");
-//         newSelect.innerHTML = "<option>...</option>";
-//         let classesToAdd = ["custom-select", "mt-3"];
-//         newSelect.classList.add(...classesToAdd);
-//         menuSelects.appendChild(newSelect);
-//         menu.drinks.map(drink => {
-//             if (drink.hasOwnProperty("typeOfItem") && Object.values(drink).indexOf("Soda") > -1) {
-//                 newSelect.innerHTML = `
-//                         <option>...</option>
-//                         <option>$${drink.regSize} - Reg Size</option>
-//                         <option>$${drink.jumboSize} - Jumbo Size</option>
-//                         <option>$${drink.halfSize} - Half Gallon</option>
-//                         <option>$${drink.gallonSize} - Gallon</option>
-//                     `;
-//             }
-//         })
-//     }
-// })
+// map through each section and display text
+// wings section
 menu.wings.map(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
-    productDiv.classList.add(...classesToAdd);
-    wingSection.appendChild(productDiv);
-    productDiv.innerHTML = `
+  // wings section
+  const wingSection = document.querySelector("#wing-section");
+  wingSection.classList.add("row");
+  const productNumOfPieces = product.numOfPieces;
+  const productType = product.typeOfItem;
+  const productPrice = product.priceOfItem;
+  const productDiv = document.createElement("div");
+  const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
+  productDiv.classList.add(...classesToAdd);
+  wingSection.appendChild(productDiv);
+  productDiv.innerHTML = `
     <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
     <p class="mx-0 my-0 product-price">$${productPrice}</p>
     `;
 })
+// more food section
 menu.moreFood.map(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
-    productDiv.classList.add(...classesToAdd);
-    notWingSection.appendChild(productDiv);
-    productDiv.innerHTML = `
+  // // notwing section
+  const notWingSection = document.querySelector("#notwing-section");
+  notWingSection.classList.add("row");
+  const productNumOfPieces = product.numOfPieces;
+  const productType = product.typeOfItem;
+  const productPrice = product.priceOfItem;
+  const productDiv = document.createElement("div");
+  const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
+  productDiv.classList.add(...classesToAdd);
+  notWingSection.appendChild(productDiv);
+  productDiv.innerHTML = `
       <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
       <p class="mx-0 my-0 product-price">$ ${productPrice}</p>`;
 })
-
+// sides section
 menu.sides.map(product => {
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const lgSize = product.lgSize;
-    const famSize = product.famSize;
-    const productDiv = document.createElement("div");
-    // const classesToAdd = ["row"];
-    // productDiv.classList.add(...classesToAdd);
-    sidesSection.appendChild(productDiv);
-    productDiv.innerHTML = `
+  // // sides section
+  const sidesSection = document.querySelector("#sides-section");
+  const productType = product.typeOfItem;
+  const regSize = product.regSize;
+  const lgSize = product.lgSize;
+  const famSize = product.famSize;
+  const productDiv = document.createElement("div");
+  sidesSection.appendChild(productDiv);
+  productDiv.innerHTML = `
       <p class="ml-0 my-0 product-type">${productType}:</p>
        <p class="ml-0 my-0 product-price"> <span>REG:</span>
         <span class="product-price mx-1">$${regSize}</span> 
@@ -184,29 +76,36 @@ menu.sides.map(product => {
         <span class="product-price mx-1" style="${famSize === "" ? "display: none;" : "display:inline;"}">$${famSize}</span>
       </p>`;
 });
+// combos section
 menu.combos.map(product => {
-    const productNumOfPieces = product.numOfPieces;
-    const productType = product.typeOfItem;
-    const productPrice = product.priceOfItem;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
-    productDiv.classList.add(...classesToAdd);
-    comboSection.appendChild(productDiv);
-    productDiv.innerHTML = `
+  // // combo section
+  const comboSection = document.querySelector("#combo-section");
+  comboSection.classList.add("row");
+  const productNumOfPieces = product.numOfPieces;
+  const productType = product.typeOfItem;
+  const productPrice = product.priceOfItem;
+  const productDiv = document.createElement("div");
+  const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
+  productDiv.classList.add(...classesToAdd);
+  comboSection.appendChild(productDiv);
+  productDiv.innerHTML = `
       <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
       <p class="mx-0 my-0 product-price">$${productPrice}</p>`;
 })
+// drinks section
 menu.drinks.map(product => {
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const jumboSize = product.jumboSize;
-    const halfSize = product.halfSize;
-    const gallonSize = product.gallonSize;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["my-1"];
-    productDiv.classList.add(...classesToAdd);
-    drinksSection.appendChild(productDiv);
-    productDiv.innerHTML = `
+  // // drinks section
+  const drinksSection = document.querySelector("#drinks-section");
+  const productType = product.typeOfItem;
+  const regSize = product.regSize;
+  const jumboSize = product.jumboSize;
+  const halfSize = product.halfSize;
+  const gallonSize = product.gallonSize;
+  const productDiv = document.createElement("div");
+  const classesToAdd = ["my-1"];
+  productDiv.classList.add(...classesToAdd);
+  drinksSection.appendChild(productDiv);
+  productDiv.innerHTML = `
       <p class="mx-0 my-0 product-type">${productType}:</p>
       <p class="mx-0 my-0 product-price">
         <span>REG:</span>
@@ -219,3 +118,51 @@ menu.drinks.map(product => {
         <span class="product-price" style="${gallonSize == "" ? "visibility: hidden" : "visibility: visible"}">$${gallonSize}</span>
       </p>`;
 })
+// =================renders Order Form dynamically=============
+document.querySelector("#menu-selects").addEventListener("change", function () {
+  // first select. hard coded in html
+  const chooseType = document.querySelector("#type-of-product");
+  if (chooseType.value === "--Start your order here--") {
+    let chooseCount = document.querySelector("#size-count");
+    chooseCount.innerHTML = "<option>...</option>";
+  }
+  Object.keys(menu).map(product => {
+    let showCount = menu[`${product}`].map(item => {
+      return item.numOfPieces;
+    });
+    let showType = menu[`${product}`].map(item => {
+      return item.typeOfItem;
+    })
+    let showPrice = menu[`${product}`].map(item => {
+      return item.priceOfItem;
+    })
+    if (chooseType.value === `${product}`) {
+      showCount.map((num, index) => {
+        // second select will change dynamically
+        let chooseCount = document.querySelector("#size-count");
+        let option = document.createElement("option");
+        option.setAttribute("value", num);
+        option.setAttribute("style", `${num === undefined ? "display:none;" : "display:block;"}`);
+        option.textContent = `${num} - ${showType[index]} - $${showPrice[index]}`;
+        chooseCount.appendChild(option);
+      })
+      if (chooseType.value === "sides") {
+        let newSelect = document.createElement("select");
+        let classesToAdd = ["custom-select", "mb-3"];
+        newSelect.classList.add(...classesToAdd);
+        // newSelect.innerHTML = `<option>...</option>`;
+        document.querySelector("#menu-selects").appendChild(newSelect);
+        showType.map((nameOfProduct, index, arrOfProducts) => {
+          let chooseCount = document.querySelector("#size-count");
+          console.log(nameOfProduct);
+          console.log(index);
+          console.log(arrOfProducts);
+          let sideOptions = document.createElement("option");
+          sideOptions.setAttribute("value", nameOfProduct);
+          sideOptions.textContent = `${nameOfProduct}`;
+          chooseCount.appendChild(sideOptions);
+        })
+      }
+    }
+  })
+});

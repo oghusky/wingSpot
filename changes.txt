@@ -1,3 +1,4 @@
+======== DONE =========
 =-take off empty drink values
 =-on iphone change font to center
 =-move submit to the right
@@ -5,3 +6,4 @@
 =-drop "flavors" in "wings" margin
 =-change background position-x
 =-flavors in div col-6
+======== UNDONE ========
