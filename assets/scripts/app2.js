@@ -95,14 +95,15 @@ menu.combos.map(product => {
 // drinks section
 menu.drinks.map(product => {
     // // drinks section
-    const drinksSection = document.querySelector("#drinks-section");
-    const productType = product.typeOfItem;
-    const regSize = product.regSize;
-    const jumboSize = product.jumboSize;
-    const halfSize = product.halfSize;
-    const gallonSize = product.gallonSize;
-    const productDiv = document.createElement("div");
-    const classesToAdd = ["my-1"];
+    const drinksSection = document.querySelector("#drinks-section"),
+        productType = product.typeOfItem,
+        regSize = product.regSize,
+        jumboSize = product.jumboSize,
+        halfSize = product.halfSize,
+        gallonSize = product.gallonSize,
+        productDiv = document.createElement("div"),
+        classesToAdd = ["my-1"];
+
     productDiv.classList.add(...classesToAdd);
     drinksSection.appendChild(productDiv);
     productDiv.innerHTML = `
@@ -127,13 +128,14 @@ document.querySelector("#menu-selects").addEventListener("change", function () {
         chooseCount.innerHTML = "<option>...</option>";
     }
     Object.keys(menu).map(product => {
-        let showCount = menu[`${product}`].map(item => {
+        let menuItems = menu[`${product}`];
+        let showCount = menuItems.map(item => {
             return item.numOfPieces;
         });
-        let showType = menu[`${product}`].map(item => {
+        let showType = menuItems.map(item => {
             return item.typeOfItem;
         });
-        let showPrice = menu[`${product}`].map(item => {
+        let showPrice = menuItems.map(item => {
             return item.priceOfItem;
         });
         if (chooseType.value === `${product}`) {
