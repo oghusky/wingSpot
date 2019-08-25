@@ -1,139 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JR Wings & Things</title>
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="./assets/styles/reset.css">
-    <!-- Bootstrap Styles -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <!-- Custom Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/main.css" />
-  </head>
-  <body>
-    <!-- Navbar Starts -->
-    <nav id="whole-nav" class="navbar navbar-expand-lg navbar-dark-bg navbar-dark fixed-top">
-      <a id="site-brand" class="navbar-brand" href="#">JR Wings</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#event-div">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#location-nav">Location</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact-section">Order</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >(404)675-4200</a
-            >
-          </li>
-        </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JR Wings & Things</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <!-- Bootstrap Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <!-- Custom Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/main.css" />
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav id="whole-nav" class="navbar navbar-expand-lg navbar-dark-bg navbar-dark fixed-top">
+    <a id="site-brand" class="navbar-brand" href="#">JR Wings</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#event-div">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#location-nav">Location</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact-section">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+            style="color: whitesmoke">(404)675-4200</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar Ends -->
+  <!-- Header starts -->
+  <header class="jumbotron vertical-center mb-0">
+    <div id="page-header">
+      <h1 class="jumbo-header">JR's WINGS & THINGS</h1>
+    </div>
+  </header>
+  <!-- Header Ends -->
+  <!-- Deals and Events start -->
+  <section class="row my-0" id="deals-and-events">
+    <div class="col-sm-6" id="deals-div"></div>
+    <div class="col-sm-6" id="event-div">
+      <h5 class="event-header">Every Friday:</h5>
+      <h5 class="event-header">JR's Sip & Paint</h5>
+    </div>
+  </section>
+  <!-- Deals and Events end -->
+  <!-- Main Content starts -->
+  <h2 class="text-center" id="menu-header">MENU</h2>
+  <section id="food-categories" class="container">
+    <hr class="endingHr" />
+    <!-- wings start -->
+    <h3 class="food-category-name text-left">WINGS</h3>
+    <div id="wing-section">
+    </div>
+    <h6 id="flavor-names">FLAVORS:</h6>
+    <p>RANCH, HOT, MILD, HBBQ, X-HOT, LEMON PEPPER, HONEY GARLIC, MILD/HOT
+      GARLIC PEPPER, HOT/HBBQ, HONEY GARLIC PEPPER, MILD/HOT HONEY, MILD/HOT
+      RANCH
+    </p>
+    <p>
+      $.75 FOR ALL FLATS/DRUMS (10PC OR LESS)
+    </p>
+    <p>
+      $.50 FOR ALL SPLIT FLAVORS
+    </p>
+    <p>
+      $.30 FOR EXTRA WET
+    </p>
+    <hr class="endingHr" />
+    <!-- wings end -->
+    <!-- not wings start -->
+    <h3 class="food-category-name text-left">MORE THAN WINGS</h3>
+    <div id="notwing-section"></div>
+    <hr class="endingHr" />
+    <!-- not wings end -->
+    <!-- combos start -->
+    <h3 class="food-category-name text-left">
+      COMBOS <span><small>INCLUDES ONE SIDE &amp; DRINK</small></span>
+    </h3>
+    <div id="combo-section"></div>
+    <!-- combos end -->
+  </section>
+  <!-- page break image starts -->
+  <hr class="endingHr" />
+  <div class="container-fluid page-break-img">
+  </div>
+  <hr class="endingHr" />
+  <!-- page break image ends -->
+  <section class="container">
+    <div id="drinks-and-sides-div" class="row">
+      <div id="sides" class="col-md-6">
+        <!-- sides start -->
+        <h3 class="food-category-name">SIDES</h3>
+        <div id="sides-section"></div>
+        <p>
+          <small><strong>CHICKEN/FISH FRIED OR GRILLED</strong></small>
+        </p>
+        <hr id="sides-section-hr" class="endingHr" />
+        <!-- sides end -->
       </div>
-    </nav>
-    <!-- Navbar Ends -->
-    <!-- Header starts -->
-    <header class="jumbotron vertical-center mb-0">
-      <div id="page-header">
-        <h1 class="jumbo-header">JR's WINGS & THINGS</h1>
-      </div>
-    </header>
-    <!-- Header Ends -->
-    <!-- Deals and Events start -->
-    <section class="row my-0" id="deals-and-events">
-        <div class="col-sm-6" id="deals-div"></div>
-        <div class="col-sm-6" id="event-div">
-          <h5 class="event-header">Every Friday:</h5>
-          <h5 class="event-header">JR's Sip & Paint</h5>
-        </div>
-    </section>
-    <!-- Deals and Events end -->
-    <!-- Main Content starts -->
-    <h2 class="text-center" id="menu-header">MENU</h2>
-    <section id="food-categories" class="container">
-      <hr class="endingHr" />
-      <!-- wings start -->
-      <h3 class="food-category-name text-left">WINGS</h3>
-      <div id="wing-section"></div>
-      <h6 id="flavor-names">FLAVORS:</h6>
-      <p>RANCH, HOT, MILD, HBBQ, X-HOT, LEMON PEPPER, HONEY GARLIC, MILD/HOT
-          GARLIC PEPPER, HOT/HBBQ, HONEY GARLIC PEPPER, MILD/HOT HONEY, MILD/HOT
-          RANCH
-      </p>
-      <p>
-        $.75 FOR ALL FLATS/DRUMS (10PC OR LESS)
-      </p>
-      <p>
-        $.50 FOR ALL SPLIT FLAVORS
-      </p>
-      <p>
-        $.30 FOR EXTRA WET
-      </p>
-      <hr class="endingHr" />
-      <!-- wings end -->
-      <!-- not wings start -->
-      <h3 class="food-category-name text-left">OTHER THAN WINGS</h3>
-      <div id="notwing-section"></div>
-      <hr class="endingHr"/>
-      <!-- not wings end -->
-      <!-- combos start -->
-      <h3 class="food-category-name text-left">
-        COMBOS <span><small>INCLUDES ONE SIDE &amp; DRINK</small></span>
-      </h3>
-      <div id="combo-section"></div>
-      <!-- combos end -->
-    </section>
-      <!-- page break image starts -->
-      <hr class="endingHr" />
-      <div class="container-fluid page-break-img">
-      </div>
-      <hr class="endingHr"/>
-      <!-- page break image ends -->
-      <section class="container">
-      <div id="drinks-and-sides-div" class="row">
-        <div id="sides" class="col-md-6">
-          <!-- sides start -->
-      <h3 class="food-category-name">SIDES</h3>
-      <div id="sides-section"></div>
-      <p>
-        <small><strong>CHICKEN/FISH FRIED OR GRILLED</strong></small>
-      </p>
-      <hr id= "sides-section-hr" class="endingHr" />
-      <!-- sides end -->
-        </div>
-        <div id="drink" class="col-md-6">
-          <!-- drinks and desserts start -->
-      <h3 class="food-category-name text-left">
+      <div id="drink" class="col-md-6">
+        <!-- drinks and desserts start -->
+        <h3 class="food-category-name text-left">
           DRINKS/DESSERTS
         </h3>
         <div id="drinks-section"></div>
@@ -142,67 +127,82 @@
         <hr class="endingHr" />
         <!-- drinks and desserts end -->
         <div id="location-nav"></div>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Main Content endss -->
-    <!-- Location starts -->
-    <section class="container">
-      <!-- <h3 id="location-header">LOCATION</h3> -->
-      <div id="location" class="row">
-        <div id="address" class="col-md-6">
-          <p class="mb-0"><strong>ADDRESS:</strong></p>
-          <p class="mb-0">JR'S WINGS AND THINGS</p>
-          <p class="mb-0">5731 TRAMMEL RD</p>
-          <p class="mb-0">LAKE CITY, GA 30260</p>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <div id="map" class="container-fluid">
-            <img src="./assets/images/map.png" alt="" class="img-fluid">
-          </div>
+  <!-- Main Content endss -->
+  <!-- Location starts -->
+  <section class="container">
+    <!-- <h3 id="location-header">LOCATION</h3> -->
+    <div id="location" class="row">
+      <div id="address" class="col-md-6">
+        <p class="mb-0"><strong>ADDRESS:</strong></p>
+        <p class="mb-0">JR'S WINGS AND THINGS</p>
+        <p class="mb-0">5731 TRAMMEL RD</p>
+        <p class="mb-0">LAKE CITY, GA 30260</p>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <div id="map" class="container-fluid">
+          <img src="./assets/images/map.png" alt="" class="img-fluid">
         </div>
       </div>
-      <hr class="endingHr" />
-    </section>
-    <!-- Location ends -->
-    <!-- Contact Form starts -->
-    <section id="contact-section">
-      <h2 id="order-title" class="text-center display-3">ORDER HERE</h2>
-      <form action="https://formspree.io/jrwingslakecity@gmail.com" method="POST">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Enter Name" name="name">
+    </div>
+    <hr class="endingHr" />
+  </section>
+  <!-- Location ends -->
+  <!-- Contact Form starts -->
+  <section id="contact-section">
+    <h2 id="order-title" class="text-center display-3">ORDER HERE</h2>
+    <form action="https://formspree.io/jrwingslakecity@gmail.com" method="POST">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Name" name="name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="example@email.com" name="_replyto" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="phone" placeholder="Phone: (555)555-5555" required>
+      </div>
+      <div class="form-group">
+        <div id="menu-selects">
+          <select name="type-of-product" id="type-of-product" class="custom-select mb-3" required>
+            <option id="blank-option" selected>--Start your order here--</option>
+            <option value="wings">Wings</option>
+            <option value="moreFood">More Than Wings</option>
+            <option value="combos">Combos</option>
+            <option value="sides">Sides</option>
+            <option value="drinks">Drinks/Desserts</option>
+          </select>
+          <select name="size-count" id="size-count" class="custom-select mb-3" required>
+            <option selected>...</option>
+          </select>
+          <select name="drink-size" id="drink-size" class="custom-select mb-3">
+            <option selected>...</option>
+          </select>
         </div>
-        <div class="form-group">
-          <input type="email" class="form-control" placeholder="example@email.com" name="_replyto">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control" cols="30" rows="10" name="order"></textarea>
-        </div>
-        <button class="btn" type="submit" value="Send">SUBMIT</button>
-      </form>
-    </section>
-    <!-- Contact Form ends -->
-    <!-- Footer starts -->
-    <!-- Footer Ends -->
-    <!-- Bootstrap Scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.0.min.js"
-      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Custom Scripts -->
-    <script src="./assets/scripts/app.js"></script>
-  </body>
+      </div>
+      <p class="text-right pb-3">
+        <button id="order-btn" class="btn" type="submit" value="Send">SUBMIT ORDER</button>
+      </p>
+    </form>
+  </section>
+  <!-- Contact Form ends -->
+  <!-- Footer starts -->
+  <!-- Footer Ends -->
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Custom Scripts -->
+  <script src="./assets/scripts/menu.js"></script>
+  <script src="./assets/scripts/app2.js"></script>
+</body>
+
 </html>
