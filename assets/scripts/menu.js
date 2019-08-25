@@ -2,284 +2,284 @@ const menu = {
 
     wings: [
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Wings",
-            "priceOfItem": "4.63"
+            "numOfWings": 6,
+            "typeOfWing": "Wings",
+            "priceOfWing": "4.63"
         },
         {
-            "numOfPieces": 10,
-            "typeOfItem": "Wings",
-            "priceOfItem": "6.60"
+            "numOfWings": 10,
+            "typeOfWing": "Wings",
+            "priceOfWing": "6.60"
         },
         {
-            "numOfPieces": 15,
-            "typeOfItem": "Wings",
-            "priceOfItem": "8.75"
+            "numOfWings": 15,
+            "typeOfWing": "Wings",
+            "priceOfWing": "8.75"
         },
         {
-            "numOfPieces": 20,
-            "typeOfItem": "Wings",
-            "priceOfItem": "10.25"
+            "numOfWings": 20,
+            "typeOfWing": "Wings",
+            "priceOfWing": "10.25"
         },
         {
-            "numOfPieces": 30,
-            "typeOfItem": "Wings",
-            "priceOfItem": "17.00"
+            "numOfWings": 30,
+            "typeOfWing": "Wings",
+            "priceOfWing": "17.00"
         },
         {
-            "numOfPieces": 50,
-            "typeOfItem": "Wings",
-            "priceOfItem": "27.50"
+            "numOfWings": 50,
+            "typeOfWing": "Wings",
+            "priceOfWing": "27.50"
         },
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Boneless Wings",
-            "priceOfItem": "4.75"
+            "numOfWings": 6,
+            "typeOfWing": "Boneless Wings",
+            "priceOfWing": "4.75"
         },
         {
-            "numOfPieces": 10,
-            "typeOfItem": "Boneless Wings",
-            "priceOfItem": "6.60"
+            "numOfWings": 10,
+            "typeOfWing": "Boneless Wings",
+            "priceOfWing": "6.60"
         }
     ],
     moreFood: [
         {
-            "numOfPieces": 3,
-            "typeOfItem": "Tenders",
-            "priceOfItem": "3.95"
+            "numOfMoreFood": 3,
+            "typeOfMoreFood": "Tenders",
+            "priceOfMoreFood": "3.95"
         },
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Tenders",
-            "priceOfItem": "6.55"
+            "numOfMoreFood": 6,
+            "typeOfMoreFood": "Tenders",
+            "priceOfMoreFood": "6.55"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Talapia",
-            "priceOfItem": "4.25"
+            "numOfMoreFood": 2,
+            "typeOfMoreFood": "Talapia",
+            "priceOfMoreFood": "4.25"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Talapia",
-            "priceOfItem": "2.75"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Talapia",
+            "priceOfMoreFood": "2.75"
         },
         {
-            "numOfPieces": " ",
-            "typeOfItem": "Single Whiting",
-            "priceOfItem": "2.75"
+            "numOfMoreFood": " ",
+            "typeOfMoreFood": "Single Whiting",
+            "priceOfMoreFood": "2.75"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Pork Chop",
-            "priceOfItem": "4.17"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Pork Chop",
+            "priceOfMoreFood": "4.17"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Philly",
-            "priceOfItem": "4.75"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Philly",
+            "priceOfMoreFood": "4.75"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Burger",
-            "priceOfItem": "4.20"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Burger",
+            "priceOfMoreFood": "4.20"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Hot Dog",
-            "priceOfItem": "1.15"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Hot Dog",
+            "priceOfMoreFood": "1.15"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Chili Dog",
-            "priceOfItem": "1.40"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Chili Dog",
+            "priceOfMoreFood": "1.40"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Slaw Dog",
-            "priceOfItem": "1.40"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Slaw Dog",
+            "priceOfMoreFood": "1.40"
         },
         {
-            "numOfPieces": " ",
-            "typeOfItem": "Liver/Gizzards",
-            "priceOfItem": "4.15"
+            "numOfMoreFood": " ",
+            "typeOfMoreFood": "Liver/Gizzards",
+            "priceOfMoreFood": "4.15"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Chicken Sandwich",
-            "priceOfItem": "4.00"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Chicken Sandwich",
+            "priceOfMoreFood": "4.00"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Ultimate Dog",
-            "priceOfItem": "1.89"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Ultimate Dog",
+            "priceOfMoreFood": "1.89"
         },
         {
-            "numOfPieces": "Single",
-            "typeOfItem": "Whiting Sandwich",
-            "priceOfItem": "4.25"
+            "numOfMoreFood": "Single",
+            "typeOfMoreFood": "Whiting Sandwich",
+            "priceOfMoreFood": "4.25"
         }
     ],
     combos: [
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Wings",
-            "priceOfItem": "6.30"
+            "numOfCombo": 6,
+            "typeOfCombo": "Wings",
+            "priceOfCombo": "6.30"
         },
         {
-            "numOfPieces": 10,
-            "typeOfItem": "Wings",
-            "priceOfItem": "8.15"
+            "numOfCombo": 10,
+            "typeOfCombo": "Wings",
+            "priceOfCombo": "8.15"
         },
         {
-            "numOfPieces": 15,
-            "typeOfItem": "Wings",
-            "priceOfItem": "10.28"
+            "numOfCombo": 15,
+            "typeOfCombo": "Wings",
+            "priceOfCombo": "10.28"
         },
         {
-            "numOfPieces": 20,
-            "typeOfItem": "Wings",
-            "priceOfItem": "12.13"
+            "numOfCombo": 20,
+            "typeOfCombo": "Wings",
+            "priceOfCombo": "12.13"
         },
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Boneless Wings",
-            "priceOfItem": "6.30"
+            "numOfCombo": 6,
+            "typeOfCombo": "Boneless Wings",
+            "priceOfCombo": "6.30"
         },
         {
-            "numOfPieces": 10,
-            "typeOfItem": "Boneless Wings",
-            "priceOfItem": "8.15"
+            "numOfCombo": 10,
+            "typeOfCombo": "Boneless Wings",
+            "priceOfCombo": "8.15"
         },
         {
-            "numOfPieces": 3,
-            "typeOfItem": "Tenders",
-            "priceOfItem": "5.95"
+            "numOfCombo": 3,
+            "typeOfCombo": "Tenders",
+            "priceOfCombo": "5.95"
         },
         {
-            "numOfPieces": 6,
-            "typeOfItem": "Tenders",
-            "priceOfItem": "8.75"
+            "numOfCombo": 6,
+            "typeOfCombo": "Tenders",
+            "priceOfCombo": "8.75"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Talapia",
-            "priceOfItem": "7.05"
+            "numOfCombo": 2,
+            "typeOfCombo": "Talapia",
+            "priceOfCombo": "7.05"
         },
         {
-            "numOfPieces": 4,
-            "typeOfItem": "Tilapia",
-            "priceOfItem": "8.75"
+            "numOfCombo": 4,
+            "typeOfCombo": "Tilapia",
+            "priceOfCombo": "8.75"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Whiting",
-            "priceOfItem": "7.05"
+            "numOfCombo": 2,
+            "typeOfCombo": "Whiting",
+            "priceOfCombo": "7.05"
         },
         {
-            "numOfPieces": 4,
-            "typeOfItem": "Whiting",
-            "priceOfItem": "8.75"
+            "numOfCombo": 4,
+            "typeOfCombo": "Whiting",
+            "priceOfCombo": "8.75"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Liver/Gizzard",
-            "priceOfItem": "6.51"
+            "numOfCombo": "",
+            "typeOfCombo": "Liver/Gizzard",
+            "priceOfCombo": "6.51"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Hot Dogs",
-            "priceOfItem": "5.10"
+            "numOfCombo": 2,
+            "typeOfCombo": "Hot Dogs",
+            "priceOfCombo": "5.10"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Chili Dogs",
-            "priceOfItem": "5.75"
+            "numOfCombo": 2,
+            "typeOfCombo": "Chili Dogs",
+            "priceOfCombo": "5.75"
         },
         {
-            "numOfPieces": 2,
-            "typeOfItem": "Ultimate Dogs",
-            "priceOfItem": "6.20"
+            "numOfCombo": 2,
+            "typeOfCombo": "Ultimate Dogs",
+            "priceOfCombo": "6.20"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Philly + 6 Wings",
-            "priceOfItem": "10.75"
+            "numOfCombo": "",
+            "typeOfCombo": "Philly + 6 Wings",
+            "priceOfCombo": "10.75"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Pork Chop + 2 Sides",
-            "priceOfItem": "7.87"
+            "numOfCombo": "",
+            "typeOfCombo": "Pork Chop + 2 Sides",
+            "priceOfCombo": "7.87"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "3 Tenders + 6 Wings",
-            "priceOfItem": "10.75"
+            "numOfCombo": "",
+            "typeOfCombo": "3 Tenders + 6 Wings",
+            "priceOfCombo": "10.75"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "2 PC Fish + 3 Tenders",
-            "priceOfItem": "10.75"
+            "numOfCombo": "",
+            "typeOfCombo": "2 PC Fish + 3 Tenders",
+            "priceOfCombo": "10.75"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "1 PC Fish + 6 Wings",
-            "priceOfItem": "9.15"
+            "numOfCombo": "",
+            "typeOfCombo": "1 PC Fish + 6 Wings",
+            "priceOfCombo": "9.15"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Chicken Sandwich",
-            "priceOfItem": "6.51"
+            "numOfCombo": "",
+            "typeOfCombo": "Chicken Sandwich",
+            "priceOfCombo": "6.51"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Burger",
-            "priceOfItem": "7.36"
+            "numOfCombo": "",
+            "typeOfCombo": "Burger",
+            "priceOfCombo": "7.36"
         },
         {
-            "numOfPieces": "",
-            "typeOfItem": "Philly (Steak/ Chicken)",
-            "priceOfItem": "7.60"
+            "numOfCombo": "",
+            "typeOfCombo": "Philly (Steak/ Chicken)",
+            "priceOfCombo": "7.60"
         }
     ],
     sides: [
         {
-            "typeOfItem": "Onion Rings",
+            "typeOfSide": "Onion Rings",
             "regSize": "1.85",
             "lgSize": "3.50",
             "famSize": ""
         },
         {
-            "typeOfItem": "Slaw",
+            "typeOfSide": "Slaw",
             "regSize": "2.04",
             "lgSize": "2.50",
             "famSize": ""
         },
         {
-            "typeOfItem": "Potato Salad",
+            "typeOfSide": "Potato Salad",
             "regSize": "2.04",
             "lgSize": "2.50",
             "famSize": ""
         },
         {
-            "typeOfItem": "Okra",
+            "typeOfSide": "Okra",
             "regSize": "2.15",
             "lgSize": "4.15",
             "famSize": ""
         },
         {
-            "typeOfItem": "Side Salad",
+            "typeOfSide": "Side Salad",
             "regSize": "3.24",
             "lgSize": "5.23",
             "famSize": ""
         },
         {
-            "typeOfItem": "Salad w/Meat",
+            "typeOfSide": "Salad w/Meat",
             "regSize": "4.50",
             "lgSize": "6.50",
             "famSize": ""
         },
         {
-            "typeOfItem": "Fries",
+            "typeOfSide": "Fries",
             "regSize": "1.85",
             "lgSize": "3.50",
             "famSize": "4.50"
@@ -287,28 +287,21 @@ const menu = {
     ],
     drinks: [
         {
-            "typeOfItem": "Tea/Lemonade",
+            "typeOfDrink": "Tea/Lemonade",
             "regSize": "1.15",
             "jumboSize": "2.15",
             "halfSize": "2.30",
             "gallonSize": "4.30"
         },
         {
-            "typeOfItem": "Soda",
+            "typeOfDrink": "Soda",
             "regSize": "1.05",
             "jumboSize": "2.10",
             "halfSize": "",
             "gallonSize": ""
         },
         {
-            "typeOfItem": "Refill",
-            "regSize": ".45",
-            "jumboSize": ".90",
-            "halfSize": "",
-            "gallonSize": ""
-        },
-        {
-            "typeOfItem": "Cake",
+            "typeOfDrink": "Cake",
             "regSize": "1.15",
             "jumboSize": "",
             "halfSize": "",

@@ -25,144 +25,187 @@ function showDeal() {
 showDeal();
 // map through each section and display text
 // wings section
-menu.wings.map(product => {
+menu.wings.map(wing => {
   // wings section
   const wingSection = document.querySelector("#wing-section");
   wingSection.classList.add("row");
-  const productNumOfPieces = product.numOfPieces;
-  const productType = product.typeOfItem;
-  const productPrice = product.priceOfItem;
-  const productDiv = document.createElement("div");
+  const wingDiv = document.createElement("div");
   const classesToAdd = ["col-lg-2", "col-sm-3", "my-1", "mx-0"];
-  productDiv.classList.add(...classesToAdd);
-  wingSection.appendChild(productDiv);
-  productDiv.innerHTML = `
-    <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-    <p class="mx-0 my-0 product-price">$${productPrice}</p>
+  wingDiv.classList.add(...classesToAdd);
+  wingSection.appendChild(wingDiv);
+  wingDiv.innerHTML = `
+    <p class="mx-0 my-0 product-type"><span>${wing.numOfWings}</span> <span>${wing.typeOfWing}</span></p>
+    <p class="mx-0 my-0 product-price">$${wing.priceOfWing}</p>
     `;
 })
 // more food section
-menu.moreFood.map(product => {
+menu.moreFood.map(moreFood => {
   // // notwing section
-  const notWingSection = document.querySelector("#notwing-section");
-  notWingSection.classList.add("row");
-  const productNumOfPieces = product.numOfPieces;
-  const productType = product.typeOfItem;
-  const productPrice = product.priceOfItem;
-  const productDiv = document.createElement("div");
+  const moreFoodSection = document.querySelector("#notwing-section");
+  moreFoodSection.classList.add("row");
+  const moreFoodDiv = document.createElement("div");
   const classesToAdd = ["col-md-3", "col-sm-4", "my-1"];
-  productDiv.classList.add(...classesToAdd);
-  notWingSection.appendChild(productDiv);
-  productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-      <p class="mx-0 my-0 product-price">$ ${productPrice}</p>`;
+  moreFoodDiv.classList.add(...classesToAdd);
+  moreFoodSection.appendChild(moreFoodDiv);
+  moreFoodDiv.innerHTML = `
+      <p class="mx-0 my-0 product-type"><span>${moreFood.numOfMoreFood}</span> <span>${moreFood.typeOfMoreFood}</span></p>
+      <p class="mx-0 my-0 product-price">$ ${moreFood.priceOfMoreFood}</p>`;
 })
 // sides section
-menu.sides.map(product => {
+menu.sides.map(side => {
   // // sides section
   const sidesSection = document.querySelector("#sides-section");
-  const productType = product.typeOfItem;
-  const regSize = product.regSize;
-  const lgSize = product.lgSize;
-  const famSize = product.famSize;
   const productDiv = document.createElement("div");
   sidesSection.appendChild(productDiv);
   productDiv.innerHTML = `
-      <p class="ml-0 my-0 product-type">${productType}:</p>
+      <p class="ml-0 my-0 product-type">${side.typeOfSide}:</p>
        <p class="ml-0 my-0 product-price"> <span>REG:</span>
-        <span class="product-price mx-1">$${regSize}</span> 
-        <span>LG:</span> <span class="product-price mx-1">$${lgSize}</span> 
-        <span  style="${famSize === "" ? "display: none;" : "display:inline;"}">FAM:</span> 
-        <span class="product-price mx-1" style="${famSize === "" ? "display: none;" : "display:inline;"}">$${famSize}</span>
+        <span class="product-price mx-1">$${side.regSize}</span> 
+        <span>LG:</span> <span class="product-price mx-1">$${side.lgSize}</span> 
+        <span  style="${side.famSize === "" ? "display: none;" : "display:inline;"}">FAM:</span> 
+        <span class="product-price mx-1" style="${side.famSize === "" ? "display: none;" : "display:inline;"}">$${side.famSize}</span>
       </p>`;
 });
 // combos section
-menu.combos.map(product => {
+menu.combos.map(combo => {
   // // combo section
   const comboSection = document.querySelector("#combo-section");
   comboSection.classList.add("row");
-  const productNumOfPieces = product.numOfPieces;
-  const productType = product.typeOfItem;
-  const productPrice = product.priceOfItem;
   const productDiv = document.createElement("div");
   const classesToAdd = ["col-md-3", "col-sm-6", "my-1"];
   productDiv.classList.add(...classesToAdd);
   comboSection.appendChild(productDiv);
   productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type"><span>${productNumOfPieces}</span> <span>${productType}</span></p>
-      <p class="mx-0 my-0 product-price">$${productPrice}</p>`;
+      <p class="mx-0 my-0 product-type"><span>${combo.numOfCombo}</span> <span>${combo.typeOfCombo}</span></p>
+      <p class="mx-0 my-0 product-price">$${combo.priceOfCombo}</p>`;
 })
 // drinks section
-menu.drinks.map(product => {
+menu.drinks.map(drink => {
   // // drinks section
   const drinksSection = document.querySelector("#drinks-section");
-  const productType = product.typeOfItem;
-  const regSize = product.regSize;
-  const jumboSize = product.jumboSize;
-  const halfSize = product.halfSize;
-  const gallonSize = product.gallonSize;
   const productDiv = document.createElement("div");
   const classesToAdd = ["my-1"];
   productDiv.classList.add(...classesToAdd);
   drinksSection.appendChild(productDiv);
   productDiv.innerHTML = `
-      <p class="mx-0 my-0 product-type">${productType}:</p>
+      <p class="mx-0 my-0 product-type">${drink.typeOfDrink}:</p>
       <p class="mx-0 my-0 product-price">
         <span>REG:</span>
-        <span class="product-price">$${regSize}</span> 
-        <span style="${jumboSize === "" ? "display: none;" : "display:inline;"}">JUMBO:</span>
-        <span class="product-price" style="${jumboSize === "" ? "display: none;" : "display:inline;"}">$${jumboSize}</span> 
-        <span style="${halfSize === "" ? "display: none;" : "display:inline;"}">HALF GALLON:</span>
-        <span class="product-price" style="${halfSize === "" ? "display: none;" : "display:inline;"}>$${halfSize}</span>
-        <span style="${gallonSize === "" ? "display: none;" : "display:inline;"}>GALLON:</span>
-        <span class="product-price" style="${gallonSize == "" ? "visibility: hidden" : "visibility: visible"}">$${gallonSize}</span>
+        <span class="product-price">$${drink.regSize}</span> 
+        <span style="${drink.jumboSize === "" ? "display: none;" : "display:inline;"}">JUMBO:</span>
+        <span class="product-price" style="${drink.jumboSize === "" ? "display: none;" : "display:inline;"}">$${drink.jumboSize}</span> 
+        <span style="${drink.halfSize === "" ? "display: none;" : "display:inline;"}">HALF GALLON:</span>
+        <span class="product-price" style="${drink.halfSize === "" ? "display: none;" : "display:inline;"}>$${drink.halfSize}</span>
+        <span style="${drink.gallonSize === "" ? "display: none;" : "display:inline;"}>GALLON:</span>
+        <span class="product-price" style="${drink.gallonSize == "" ? "visibility: hidden" : "visibility: visible"}">$${drink.gallonSize}</span>
       </p>`;
 })
 // =================renders Order Form dynamically=============
+// initially hide size choose select element
+hideSizeSelect();
 document.querySelector("#menu-selects").addEventListener("change", function () {
-  // first select. hard coded in html
-  const chooseType = document.querySelector("#type-of-product");
-  if (chooseType.value === "--Start your order here--") {
-    let chooseCount = document.querySelector("#size-count");
-    chooseCount.innerHTML = "<option>...</option>";
-  }
-  Object.keys(menu).map(product => {
-    let showCount = menu[`${product}`].map(item => {
-      return item.numOfPieces;
-    });
-    let showType = menu[`${product}`].map(item => {
-      return item.typeOfItem;
-    })
-    let showPrice = menu[`${product}`].map(item => {
-      return item.priceOfItem;
-    })
-    if (chooseType.value === `${product}`) {
-      showCount.map((num, index) => {
-        // second select will change dynamically
-        let chooseCount = document.querySelector("#size-count");
-        let option = document.createElement("option");
-        option.setAttribute("value", num);
-        option.setAttribute("style", `${num === undefined ? "display:none;" : "display:block;"}`);
-        option.textContent = `${num} - ${showType[index]} - $${showPrice[index]}`;
-        chooseCount.appendChild(option);
-      })
-      if (chooseType.value === "sides") {
-        let newSelect = document.createElement("select");
-        let classesToAdd = ["custom-select", "mb-3"];
-        newSelect.classList.add(...classesToAdd);
-        // newSelect.innerHTML = `<option>...</option>`;
-        document.querySelector("#menu-selects").appendChild(newSelect);
-        showType.map((nameOfProduct, index, arrOfProducts) => {
-          let chooseCount = document.querySelector("#size-count");
-          console.log(nameOfProduct);
-          console.log(index);
-          console.log(arrOfProducts);
-          let sideOptions = document.createElement("option");
-          sideOptions.setAttribute("value", nameOfProduct);
-          sideOptions.textContent = `${nameOfProduct}`;
-          chooseCount.appendChild(sideOptions);
-        })
-      }
+  const selectProduct = document.querySelector("#type-of-product");
+  const selectCount = document.querySelector("#size-count");
+  const selectSize = document.querySelector("#drink-size");
+  selectProduct.addEventListener("change", function () {
+    selectCount.innerHTML = `<option>...</option>`
+  });
+  selectCount.addEventListener("change", function () {
+    selectSize.innerHTML = `<option>...</option>`
+  });
+  for (products in menu) {
+    if (selectProduct.value === products) {
+      menu[`${products}`].filter(wing => {
+        if (wing.hasOwnProperty("typeOfWing")) {
+          hideSizeSelect();
+          let wingOption = document.createElement("option");
+          wingOption.setAttribute("value", `${wing.numOfWings}${wing.typeOfWing}`);
+          wingOption.textContent = `${wing.numOfWings} ${wing.typeOfWing} $${wing.priceOfWing}`;
+          selectCount.appendChild(wingOption);
+        }
+      });
+      menu[`${products}`].filter(moreFood => {
+        if (moreFood.hasOwnProperty("typeOfMoreFood")) {
+          hideSizeSelect();
+          let moreFoodOption = document.createElement("option");
+          moreFoodOption.setAttribute("value", `${moreFood.numOfMoreFood}${moreFood.typeOfMoreFood}`);
+          moreFoodOption.textContent = `${moreFood.numOfMoreFood} ${moreFood.typeOfMoreFood} $${moreFood.priceOfMoreFood}`;
+          selectCount.appendChild(moreFoodOption);
+        }
+      });
+      menu[`${products}`].filter(combo => {
+        if (combo.hasOwnProperty("typeOfCombo")) {
+          hideSizeSelect();
+          let comboOption = document.createElement("option");
+          comboOption.setAttribute("value", `${combo.numOfCombo}${combo.typeOfCombo}`);
+          comboOption.textContent = `${combo.numOfCombo} ${combo.typeOfCombo} $${combo.priceOfCombo}`;
+          selectCount.appendChild(comboOption);
+        }
+      });
+      menu[`${products}`].filter(side => {
+        if (side.hasOwnProperty("typeOfSide")) {
+          showSizeSelect()
+          let sideOption = document.createElement("option");
+          sideOption.setAttribute("value", `${side.typeOfSide}`);
+          sideOption.textContent = `${side.typeOfSide}`;
+          selectCount.appendChild(sideOption);
+          if (selectCount.value === side.typeOfSide) {
+            let sideRegSizeOption = document.createElement("option");
+            let sideLgSizeOption = document.createElement("option");
+            let sideFamSizeOption = document.createElement("option");
+            sideRegSizeOption.setAttribute("value", `${side.regSize}`);
+            sideLgSizeOption.setAttribute("value", `${side.lgSize}`);
+            sideFamSizeOption.setAttribute("value", `${side.famSize}`);
+            sideRegSizeOption.setAttribute("style", `${side.regSize === "" ? "display:none;" : "display:block"}`);
+            sideLgSizeOption.setAttribute("style", `${side.lgSize === "" ? "display:none;" : "display:block"}`);
+            sideFamSizeOption.setAttribute("style", `${side.famSize === "" ? "display:none;" : "display:block"}`);
+            sideRegSizeOption.textContent = `$${side.regSize} - Regular`;
+            sideLgSizeOption.textContent = `$${side.lgSize} - Large`;
+            sideFamSizeOption.textContent = `$${side.famSize} - Family Size`;
+            let sizeOptionsToAppend = [sideRegSizeOption, sideLgSizeOption, sideFamSizeOption];
+            selectSize.append(...sizeOptionsToAppend);
+          }
+        }
+      });
+      menu[`${products}`].filter(drink => {
+        showSizeSelect();
+        if (drink.hasOwnProperty("typeOfDrink")) {
+          let drinkOption = document.createElement("option");
+          drinkOption.setAttribute("value", `${drink.typeOfDrink}`);
+          drinkOption.textContent = `${drink.typeOfDrink}`;
+          selectCount.appendChild(drinkOption);
+          if (selectCount.value === drink.typeOfDrink) {
+            let drinkRegSizeOption = document.createElement("option");
+            let drinkJumboSizeOption = document.createElement("option");
+            let drinkHalfGSizeOption = document.createElement("option");
+            let drinkGallonSizeOption = document.createElement("option");
+            drinkRegSizeOption.setAttribute("value", `${drink.regSize}`);
+            drinkJumboSizeOption.setAttribute("value", `${drink.jumboSize}`);
+            drinkHalfGSizeOption.setAttribute("value", `${drink.halfSize}`);
+            drinkGallonSizeOption.setAttribute("value", `${drink.gallonSize}`);
+            drinkRegSizeOption.setAttribute("style", `${drink.regSize === "" ? "display:none;" : "display:block"}`);
+            drinkJumboSizeOption.setAttribute("style", `${drink.jumboSize === "" ? "display:none;" : "display:block"}`);
+            drinkHalfGSizeOption.setAttribute("style", `${drink.halfSize === "" ? "display:none;" : "display:block"}`);
+            drinkGallonSizeOption.setAttribute("style", `${drink.gallonSize === "" ? "display:none;" : "display:block"}`);
+            drinkRegSizeOption.textContent = `$${drink.regSize} - Regular`;
+            drinkJumboSizeOption.textContent = `$${drink.jumboSize} - Jumbo`;
+            drinkHalfGSizeOption.textContent = `$${drink.halfSize} - Half Gallon`;
+            drinkGallonSizeOption.textContent = `$${drink.gallonSize} - Gallon`;
+            let drinkOptionsToAppend = [drinkRegSizeOption, drinkJumboSizeOption, drinkHalfGSizeOption, drinkGallonSizeOption]
+            selectSize.append(...drinkOptionsToAppend);
+          }
+        }
+      });
     }
-  })
+  }
 });
+// ============= show/hide size choose select ===============
+function hideSizeSelect() {
+  let chooseSize = document.querySelector("#drink-size");
+  chooseSize.style.display = "none";
+  chooseSize.innerHTML = `<option>...</option>`
+}
+function showSizeSelect() {
+  let chooseSize = document.querySelector("#drink-size");
+  chooseSize.style.display = "block";
+}
