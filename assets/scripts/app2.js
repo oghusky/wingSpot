@@ -104,9 +104,12 @@ menu.drinks.map(drink => {
 // initially hide size choose select element
 hideSizeSelect();
 document.querySelector("#menu-selects").addEventListener("change", function () {
+  hideOrShowSelect();
   const selectProduct = document.querySelector("#type-of-product");
   const selectCount = document.querySelector("#size-count");
   const selectSize = document.querySelector("#drink-size");
+  const hiddenValue = document.querySelector("#cost");
+  const itemID = document.querySelector("#item-id");
   selectProduct.addEventListener("change", function () {
     selectCount.innerHTML = `<option>...</option>`
   });
@@ -114,37 +117,36 @@ document.querySelector("#menu-selects").addEventListener("change", function () {
     selectSize.innerHTML = `<option>...</option>`
   });
   for (products in menu) {
-    if (selectProduct.value === products) {
+    if (selectProduct.value === products && selectProduct.value !== "") {
       menu[`${products}`].filter(wing => {
         if (wing.hasOwnProperty("typeOfWing")) {
-          hideSizeSelect();
           let wingOption = document.createElement("option");
-          wingOption.setAttribute("value", `${wing.numOfWings}${wing.typeOfWing}`);
+          wingOption.setAttribute("value", `${wing.priceOfWing}`);
           wingOption.textContent = `${wing.numOfWings} ${wing.typeOfWing} $${wing.priceOfWing}`;
           selectCount.appendChild(wingOption);
+          hiddenValue.value = Number(selectCount.value);
         }
       });
       menu[`${products}`].filter(moreFood => {
         if (moreFood.hasOwnProperty("typeOfMoreFood")) {
-          hideSizeSelect();
           let moreFoodOption = document.createElement("option");
-          moreFoodOption.setAttribute("value", `${moreFood.numOfMoreFood}${moreFood.typeOfMoreFood}`);
+          moreFoodOption.setAttribute("value", `${moreFood.priceOfMoreFood}`);
           moreFoodOption.textContent = `${moreFood.numOfMoreFood} ${moreFood.typeOfMoreFood} $${moreFood.priceOfMoreFood}`;
           selectCount.appendChild(moreFoodOption);
+          hiddenValue.value = Number(selectCount.value);
         }
       });
       menu[`${products}`].filter(combo => {
         if (combo.hasOwnProperty("typeOfCombo")) {
-          hideSizeSelect();
           let comboOption = document.createElement("option");
-          comboOption.setAttribute("value", `${combo.numOfCombo}${combo.typeOfCombo}`);
+          comboOption.setAttribute("value", `${combo.priceOfCombo}`);
           comboOption.textContent = `${combo.numOfCombo} ${combo.typeOfCombo} $${combo.priceOfCombo}`;
           selectCount.appendChild(comboOption);
+          hiddenValue.value = Number(selectCount.value);
         }
       });
       menu[`${products}`].filter(side => {
         if (side.hasOwnProperty("typeOfSide")) {
-          showSizeSelect()
           let sideOption = document.createElement("option");
           sideOption.setAttribute("value", `${side.typeOfSide}`);
           sideOption.textContent = `${side.typeOfSide}`;
@@ -159,16 +161,16 @@ document.querySelector("#menu-selects").addEventListener("change", function () {
             sideRegSizeOption.setAttribute("style", `${side.regSize === "" ? "display:none;" : "display:block"}`);
             sideLgSizeOption.setAttribute("style", `${side.lgSize === "" ? "display:none;" : "display:block"}`);
             sideFamSizeOption.setAttribute("style", `${side.famSize === "" ? "display:none;" : "display:block"}`);
-            sideRegSizeOption.textContent = `$${side.regSize} - Regular`;
-            sideLgSizeOption.textContent = `$${side.lgSize} - Large`;
-            sideFamSizeOption.textContent = `$${side.famSize} - Family Size`;
+            sideRegSizeOption.innerHTML = `$<span class="cost-value">${side.regSize}</span> - Regular`;
+            sideLgSizeOption.innerHTML = `$<span class="cost-value">${side.lgSize}</span> - Large`;
+            sideFamSizeOption.innerHTML = `$<span class="cost-value">${side.famSize}</span> - Family Size`;
             let sizeOptionsToAppend = [sideRegSizeOption, sideLgSizeOption, sideFamSizeOption];
             selectSize.append(...sizeOptionsToAppend);
+            hiddenValue.value = parseFloat(selectSize.value).toFixed(2);
           }
         }
       });
       menu[`${products}`].filter(drink => {
-        showSizeSelect();
         if (drink.hasOwnProperty("typeOfDrink")) {
           let drinkOption = document.createElement("option");
           drinkOption.setAttribute("value", `${drink.typeOfDrink}`);
@@ -193,6 +195,7 @@ document.querySelector("#menu-selects").addEventListener("change", function () {
             drinkGallonSizeOption.textContent = `$${drink.gallonSize} - Gallon`;
             let drinkOptionsToAppend = [drinkRegSizeOption, drinkJumboSizeOption, drinkHalfGSizeOption, drinkGallonSizeOption]
             selectSize.append(...drinkOptionsToAppend);
+            hiddenValue.value = parseFloat(selectSize.value).toFixed(2);
           }
         }
       });
@@ -203,9 +206,68 @@ document.querySelector("#menu-selects").addEventListener("change", function () {
 function hideSizeSelect() {
   let chooseSize = document.querySelector("#drink-size");
   chooseSize.style.display = "none";
-  chooseSize.innerHTML = `<option>...</option>`
 }
 function showSizeSelect() {
   let chooseSize = document.querySelector("#drink-size");
   chooseSize.style.display = "block";
+}
+// ============== Add to order =====================
+
+function OrderItem(orderItemID, numOfOrderItems, typeOfOrderItems, sizeOfOrderItems, costOfItem) {
+  this.orderItemID = orderItemID;
+  this.numOfOrderItems = numOfOrderItems;
+  this.typeOfOrderItems = typeOfOrderItems;
+  this.sizeOfOrderItems = sizeOfOrderItems;
+  this.costOfItem = costOfItem;
+}
+document.querySelector("#add-to-order-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const selectProduct = document.querySelector("#type-of-product");
+  const selectCount = $("#size-count option:selected").text();
+  const selectSize = $("#drink-size option:selected").text();
+  const costOfItem = document.querySelector("#cost");
+  if (costOfItem.value !== "") {
+    pushToOrder(order.length + 1, selectProduct.value, selectCount, selectSize, Number(costOfItem.value));
+  }
+  clearOrderToAddToOrder();
+  addItemToPage();
+})
+function pushToOrder(id, product, count, size, cost) {
+  let orderItem = new OrderItem(id, product, count, size, cost);
+  order.push(orderItem);
+  console.log(order);
+  let sum = 0;
+  order.forEach(item => {
+    return sum += item.costOfItem
+  });
+  console.log(sum);
+  document.querySelector("#total-cost").textContent = `${sum}`
+}
+
+function hideOrShowSelect() {
+  const selectProduct = document.querySelector("#type-of-product");
+  const selectCount = document.querySelector("#size-count");
+  hideSizeSelect();
+  if (selectProduct.value === "sides" || selectProduct.value === "drinks") {
+    showSizeSelect();
+  }
+}
+function clearOrderToAddToOrder() {
+  const confirmOrder = document.querySelector("#confirm-order");
+  confirmOrder.innerHTML = " ";
+}
+function addItemToPage() {
+  const confirmOrder = document.querySelector("#confirm-order");
+
+  for (i = 0; i < order.length; i++) {
+    let itemToShow = document.createElement("div");
+    itemToShow.innerHTML = `
+      <p class="ordered-items">${order[i].typeOfOrderItems}
+        <span style=${order[i].sizeOfOrderItems === "..." ? "display:none" : "display:block"}>${order[i].sizeOfOrderItems}</span>
+      </p> 
+    `;
+    console.log(itemToShow)
+    confirmOrder.appendChild(itemToShow);
+    console.log(order[i]);
+  }
 }
