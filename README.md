@@ -5,7 +5,7 @@
 - Select options render dynamically
 - NavBar click events trigger smooth page scrolling
 - Mobile Responsive
-- Contact form if being through FormSpree.io. store recieves order on submission
+- Contact form is being submitted through FormSpree.io. store recieves order on submission
 ## Build Stack
 - HTML, CSS, Javascript, Bootstrap, Jquery
 - Menu being rendered from menu object in menu.js file
