@@ -8,6 +8,9 @@
   <title>JR Wings & Things</title>
   <!-- Reset CSS -->
   <link rel="stylesheet" href="./assets/styles/reset.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
   <!-- Bootstrap Styles -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -154,8 +157,37 @@
   <!-- Location ends -->
   <!-- Contact Form starts -->
   <section id="contact-section">
-    <h2 id="order-title" class="text-center display-3">ORDER HERE</h2>
+    <h4 id="order-title" class="text-center display-3">ORDER HERE</h4>
+
+    <div class="form-group">
+      <div id="menu-selects">
+        <select name="type-of-product" id="type-of-product" class="custom-select mb-3" required>
+          <option id="blank-option">--Start your order here--</option>
+          <option value="wings">Wings</option>
+          <option value="moreFood">More Than Wings</option>
+          <option value="combos">Combos</option>
+          <option value="sides">Sides</option>
+          <option value="drinks">Drinks/Desserts</option>
+        </select>
+        <select name="size-count" id="size-count" class="custom-select mb-3" required>
+          <option>...</option>
+        </select>
+        <select name="drink-size" id="drink-size" class="custom-select mb-3">
+          <option>...</option>
+        </select>
+        <p class="text-right">
+          <button id="add-to-order-btn" class="btn" value="Send">ADD TO ORDER</button>
+        </p>
+      </div>
+    </div>
+    <input type="hidden" name="id" id="item-id">
+    <input type="hidden" name="cost" id="cost">
+    <input type="hidden" name="sub-total" id="sub-total">
+
+    <h4 id="order-title" class="text-center display-3">CONFIRM ORDER</h4>
+    <h6 id="total-cost-header">SubTotal: $<span id="total-cost">0.00</span></h6>
     <form action="https://formspree.io/jrwingslakecity@gmail.com" method="POST">
+      <div id="confirm-order" name="confirm-order"></div>
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Enter Name" name="name" required>
       </div>
@@ -166,25 +198,11 @@
         <input type="text" class="form-control" name="phone" placeholder="Phone: (555)555-5555" required>
       </div>
       <div class="form-group">
-        <div id="menu-selects">
-          <select name="type-of-product" id="type-of-product" class="custom-select mb-3" required>
-            <option id="blank-option" selected>--Start your order here--</option>
-            <option value="wings">Wings</option>
-            <option value="moreFood">More Than Wings</option>
-            <option value="combos">Combos</option>
-            <option value="sides">Sides</option>
-            <option value="drinks">Drinks/Desserts</option>
-          </select>
-          <select name="size-count" id="size-count" class="custom-select mb-3" required>
-            <option selected>...</option>
-          </select>
-          <select name="drink-size" id="drink-size" class="custom-select mb-3">
-            <option selected>...</option>
-          </select>
-        </div>
+        <textarea class="form-control" name="special-instructions" id="special-instructions" cols="30" rows="10"
+          placeholder="Special Instructions..."></textarea>
       </div>
       <p class="text-right pb-3">
-        <button id="order-btn" class="btn" type="submit" value="Send">SUBMIT ORDER</button>
+        <button id="order-btn" class="btn" value="Send">CONFIRM ORDER</button>
       </p>
     </form>
   </section>

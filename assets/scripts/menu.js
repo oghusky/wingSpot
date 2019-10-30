@@ -345,4 +345,5 @@ const menu = {
             "dealPrice": "6.50"
         }
     ]
-}
+};
+const order = [];

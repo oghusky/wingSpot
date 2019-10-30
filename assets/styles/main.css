@@ -28,7 +28,7 @@ nav {
 h3 {
 	font-weight: bold;
 }
-form{
+form, #menu-selects,#total-cost-header{
 	width: 70%;
 	margin: 0 auto 1rem auto;
 }
@@ -99,6 +99,15 @@ h1.jumbo-header {
 #order-btn{
 	background: var(--main-black);
 	color: var(--main-white);
+	width: 10rem;
+}
+#add-to-order-btn{
+	background: var(--main-white);
+	width: 10rem;
+}
+#total-cost-header{
+	font-size: 2rem;
+	color: var(--main-white);
 }
 .product-type {
 	color: var(--main-red);
@@ -126,6 +135,11 @@ h1.jumbo-header {
 #address p {
 	font-size: 1.5rem;
 	font-weight: 700;
+}
+.ordered-items{
+	background-color: var(--main-white);
+	font-size: 1rem;
+	padding: .5rem;
 }
 @media only screen and (max-width: 767px) {
 	.jumbotron {
