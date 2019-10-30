@@ -28,7 +28,7 @@ nav {
 h3 {
 	font-weight: bold;
 }
-form, #menu-selects{
+form, #menu-selects,#total-cost-header{
 	width: 70%;
 	margin: 0 auto 1rem auto;
 }
@@ -107,6 +107,7 @@ h1.jumbo-header {
 }
 #total-cost-header{
 	font-size: 2rem;
+	color: var(--main-white);
 }
 .product-type {
 	color: var(--main-red);

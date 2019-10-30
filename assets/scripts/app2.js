@@ -227,26 +227,24 @@ document.querySelector("#add-to-order-btn").addEventListener("click", function (
   const selectSize = $("#drink-size option:selected").text();
   const costOfItem = document.querySelector("#cost");
   if (costOfItem.value !== "") {
-    pushToOrder(order.length + 1, selectProduct.value, selectCount, selectSize, Number(costOfItem.value));
+    pushToOrder(order.length, selectProduct.value, selectCount, selectSize, Number(costOfItem.value));
   }
   clearOrderToAddToOrder();
   addItemToPage();
+  console.log(order);
 })
 function pushToOrder(id, product, count, size, cost) {
   let orderItem = new OrderItem(id, product, count, size, cost);
   order.push(orderItem);
-  console.log(order);
   let sum = 0;
   order.forEach(item => {
     return sum += item.costOfItem
   });
-  console.log(sum);
-  document.querySelector("#total-cost").textContent = `${sum}`
+  document.querySelector("#total-cost").textContent = `${sum.toFixed(2)}`
 }
 
 function hideOrShowSelect() {
   const selectProduct = document.querySelector("#type-of-product");
-  const selectCount = document.querySelector("#size-count");
   hideSizeSelect();
   if (selectProduct.value === "sides" || selectProduct.value === "drinks") {
     showSizeSelect();
@@ -258,16 +256,31 @@ function clearOrderToAddToOrder() {
 }
 function addItemToPage() {
   const confirmOrder = document.querySelector("#confirm-order");
-
   for (i = 0; i < order.length; i++) {
     let itemToShow = document.createElement("div");
     itemToShow.innerHTML = `
-      <p class="ordered-items">${order[i].typeOfOrderItems}
+      <input type="hidden" value="${order[i].orderItemID}">
+      <p class="ordered-items"><span class="pl-3">${order[i].typeOfOrderItems}</span>
         <span style=${order[i].sizeOfOrderItems === "..." ? "display:none" : "display:block"}>${order[i].sizeOfOrderItems}</span>
-      </p> 
+        <span class="float-right text-danger pr-3 deleted" value="${order[i].orderItemID}"><i class="fas fa-times"></i></span>
+        </p> 
     `;
-    console.log(itemToShow)
     confirmOrder.appendChild(itemToShow);
-    console.log(order[i]);
   }
 }
+
+// delete particular item from order
+$(document).on("click", ".deleted", function () {
+  let getValueOfID = parseFloat(this.getAttribute("value"));
+  if (order.length !== 0) {
+    let sum = 0;
+    console.log(getValueOfID);
+    order.splice(getValueOfID, 1);
+    order.map(item => {
+      sum += item.costOfItem
+    });
+    clearOrderToAddToOrder();
+    addItemToPage();
+    document.querySelector("#total-cost").textContent = `${sum.toFixed(2)}`
+  }
+});
